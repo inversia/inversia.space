@@ -1,0 +1,100 @@
+@font-face {
+    font-family:Angoola;
+    font-style:normal;
+    font-weight:300;
+    src:url(./fonts/Angoola.ttf);
+}
+
+html {
+}
+
+body {
+
+    font-family:Angoola;
+    color:#FCF8E7;
+    
+    background-color: #010101;
+
+    background-image: url(./art/tri-left.svg),
+                      url(./art/tri-right.svg),
+                      url(./art/inversialogo.svg);
+
+    background-repeat: no-repeat;
+
+    background-size: 18vw, 18vw, 43vw;
+
+    background-position: left 5vw,
+                         right 5vw,
+                         center 14vw;
+}
+
+div {
+    box-sizing:border-box;
+}
+
+.menu {
+    display:flex; 
+    /*border: 2px solid #e83a82; */
+    justify-content: space-around;
+    padding:45px 150px 45px 150px;
+}
+
+    .menu a {
+
+        font-size:2.5vw;
+        padding: 0 25px;
+        color: #FCF8E7;
+        text-decoration: none;
+/*         border: 2px solid #e83a82; */
+    }
+
+.header{
+    /* border: 2px solid #e83a82; */
+    height:100%;
+    width: 100%;
+}
+
+
+h2 {
+    color:#FCF8E7; 
+    font-size:50px;
+    
+       
+}
+
+p {
+    color:#FCF8E7; 
+    font-size:25px;
+    padding-top: 40px;
+    white-space:nowrap;
+}
+
+.video{
+    
+}
+
+
+.about {
+    /* border: 2px solid #e83a82; */
+    padding:0px 10%;
+
+    margin-top: 50vw;
+
+    background-image:url(/art/knopa.svg);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: bottom center;
+
+    height: 75vmax;
+}
+
+    .about p {
+        font-size: 2vmax;
+        line-height: 5vmax;
+    }
+
+    .about h2 {
+        font-size: 5vmax;
+        margin-left: 5%;
+
+    }
