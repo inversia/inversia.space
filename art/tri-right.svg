@@ -1,0 +1,11 @@
+
+<svg width="218px" height="756px" viewBox="0 0 218 756" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4-Copy-4" transform="translate(109.000000, 378.000000) scale(-1, 1) translate(-109.000000, -378.000000) ">
+            <polygon id="Triangle" fill="#BAB4AF" transform="translate(109.000000, 378.000000) rotate(90.000000) translate(-109.000000, -378.000000) " points="109 269 487 487 -269 487"></polygon>
+            <polygon id="Triangle-3-Copy" stroke="#979797" fill="#D8D8D8" transform="translate(28.250000, 148.000000) scale(-1, 1) rotate(-90.000000) translate(-28.250000, -148.000000) " points="28.25 120.75 174.25 175.25 -117.75 175.25"></polygon>
+            <polygon id="Triangle-3-Copy-2" stroke="#979797" fill="#D8D8D8" transform="translate(28.250000, 608.000000) scale(-1, 1) rotate(-90.000000) translate(-28.250000, -608.000000) " points="28.25 580.75 174.25 635.25 -117.75 635.25"></polygon>
+            <polygon id="Polygon-Copy" stroke="#979797" fill="#D8D8D8" points="136.5 237 179 378 136.5 519 94 378"></polygon>
+        </g>
+    </g>
+</svg>
