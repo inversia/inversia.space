@@ -50,7 +50,6 @@ div {
 
 .header{
     /* border: 2px solid #e83a82; */
-    height:100%;
     width: 100%;
 }
 
@@ -66,31 +65,24 @@ p {
     color:#FCF8E7; 
     font-size:25px;
     padding-top: 40px;
-    white-space:nowrap;
-}
-
-.video{
-    
 }
 
 
 .about {
     /* border: 2px solid #e83a82; */
     padding:0px 10%;
-
     margin-top: 50vw;
-
     background-image:url(/art/knopa.svg);
     background-repeat:no-repeat;
     background-size:contain;
     background-position: bottom center;
-
     height: 75vmax;
 }
 
     .about p {
         font-size: 2vmax;
         line-height: 5vmax;
+        white-space:nowrap;
     }
 
     .about h2 {
@@ -98,3 +90,43 @@ p {
         margin-left: 5%;
 
     }
+
+.works {
+
+    padding: 0 5vw;
+
+}
+
+    .work {
+        height:100%;
+        width:100%;  
+        /*border: 2px solid #e83a82;  */
+        display:flex;
+
+    }
+
+        .work .media {
+            border: 2px solid #e83a82;
+        }
+
+            .work .video-container {
+                position:relative;
+                width:40vw;
+                padding-bottom:56.25%;
+/*                 border: 2px solid #45e83a; */
+            }
+
+            .work .video-container iframe {
+                position:absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+        .work p {
+            font-size:2vw;
+            padding:0 0 0 10vw;
+            border: 2px solid #e83a82;
+            line-height: 5vmax;
+        }
