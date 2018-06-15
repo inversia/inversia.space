@@ -98,35 +98,45 @@ p {
 }
 
     .work {
-        height:100%;
         width:100%;  
         /*border: 2px solid #e83a82;  */
         display:flex;
-
+        margin-bottom: 5vw;
     }
 
         .work .media {
-            border: 2px solid #e83a82;
+            /*border: 2px solid #e83a82;*/
         }
 
             .work .video-container {
                 position:relative;
                 width:40vw;
                 padding-bottom:56.25%;
-/*                 border: 2px solid #45e83a; */
+                /*border: 2px solid #45e83a;*/
+
+
             }
 
             .work .video-container iframe {
                 position:absolute;
                 left: 0;
                 top: 0;
+                bottom: 0;
                 width: 100%;
                 height: 100%;
             }
 
         .work p {
             font-size:2vw;
-            padding:0 0 0 10vw;
-            border: 2px solid #e83a82;
+            padding:0 0 0 0vw;
+            /*border: 2px solid #e83a82;*/
             line-height: 5vmax;
         }
+
+            .work p:nth-child(even){
+                padding-left:5vw;
+            }
+
+            .work p:nth-child(odd){
+                padding-right:5vw;
+            }
