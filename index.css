@@ -5,6 +5,22 @@
     src:url(./fonts/Angoola.ttf);
 }
 
+@font-face {
+    font-family:"Citrica";
+    font-style:normal;
+    font-weight:300;
+    src:url(./fonts/Citrica.ttf);
+}
+
+@font-face {
+    font-family:"Ubuntu";
+    font-style:normal;
+    font-weight:100;
+    src:url(./fonts/Ubuntu.ttf);
+}
+
+
+
 html {
 }
 
@@ -51,6 +67,16 @@ div {
 .header{
     /* border: 2px solid #e83a82; */
     width: 100%;
+}
+
+h1{
+    text-align: left;
+    color:#bab4af;
+    font-size:14vw;
+    margin-top:0.8em;
+    text-stroke: 2px black;
+    position:relative;
+    z-index:1;
 }
 
 
@@ -108,7 +134,7 @@ p {
     }
 
         .work a {
-            color:#c0a781;
+            color:#bab4af;
             text-decoration:none;
             border-bottom: 2px solid #fcf8e7;
             padding-bottom: 0.2vw;
@@ -137,10 +163,11 @@ p {
             }
 
         .work p {
-            font-size:1.5vw;
+            font-size: 1.9vw;
             padding:0 0 0 0vw;
             /*border: 2px solid #e83a82;*/
-            line-height: 5vmax;
+            line-height: 1.8em;
+            font-family:Ubuntu;
         }
 
             .work p:nth-child(even){
