@@ -92,9 +92,6 @@ p {
     }
 
 .works {
-
-    padding: 0 5vw;
-
 }
 
     .work {
@@ -102,7 +99,20 @@ p {
         /*border: 2px solid #e83a82;  */
         display:flex;
         margin-bottom: 5vw;
+        padding: 0 5vw;
+
     }
+
+    .work.full-width {
+        padding: 0;
+    }
+
+        .work a {
+            color:#c0a781;
+            text-decoration:none;
+            border-bottom: 2px solid #fcf8e7;
+            padding-bottom: 0.2vw;
+        }
 
         .work .media {
             /*border: 2px solid #e83a82;*/
@@ -127,7 +137,7 @@ p {
             }
 
         .work p {
-            font-size:2vw;
+            font-size:1.5vw;
             padding:0 0 0 0vw;
             /*border: 2px solid #e83a82;*/
             line-height: 5vmax;
@@ -135,6 +145,7 @@ p {
 
             .work p:nth-child(even){
                 padding-left:5vw;
+                text-align:right;
             }
 
             .work p:nth-child(odd){
