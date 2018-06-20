@@ -19,30 +19,34 @@
     src:url(./fonts/Ubuntu.ttf);
 }
 
+@font-face {
+    font-family:"Razer";
+    font-style:normal;
+    font-weight:100;
+    src:url(./fonts/Razer.ttf);
+}
+
+
 
 
 html {
 }
 
 body {
-
     font-family:Angoola;
     color:#FCF8E7;
-    
     background-color: #010101;
-
     background-image: url(./art/tri-left.svg),
                       url(./art/tri-right.svg),
                       url(./art/inversialogo.svg);
-
     background-repeat: no-repeat;
-
     background-size: 18vw, 18vw, 43vw;
-
     background-position: left 5vw,
                          right 5vw,
                          center 14vw;
-}
+                      /*     filter:invert(100%);
+    background-color:white; */
+                      }
 
 div {
     box-sizing:border-box;
@@ -69,56 +73,108 @@ div {
     width: 100%;
 }
 
-h1{
+
+h2{
     text-align: left;
     color:#bab4af;
     font-size:14vw;
-    margin-top:0.8em;
+    margin-top: 0.8em;
     text-stroke: 2px black;
     position:relative;
     z-index:1;
 }
 
 
-h2 {
+h1 {
     color:#FCF8E7; 
-    font-size:50px;
+    font-size:5vw;
     
        
 }
 
-p {
+p, ul {
     color:#FCF8E7; 
-    font-size:25px;
-    padding-top: 40px;
+    font-family:Ubuntu;
 }
 
 
+
 .about {
-    /* border: 2px solid #e83a82; */
+    /*border: 2px solid #e83a82;*/
     padding:0px 10%;
     margin-top: 50vw;
     background-image:url(/art/knopa.svg);
     background-repeat:no-repeat;
     background-size:contain;
-    background-position: bottom center;
-    height: 75vmax;
+    background-position: 0 35vw;
+    position:relative;
+    height:84vw;
 }
+
 
     .about p {
-        font-size: 2vmax;
-        line-height: 5vmax;
+        font-size: 2.2vw;
+        line-height: 1.8em;
         white-space:nowrap;
-    }
-
-    .about h2 {
-        font-size: 5vmax;
-        margin-left: 5%;
 
     }
+
+    .about h1 {
+        margin-top:17%;
+        margin-bottom:1.4em;
+
+    }
+
+    .about .triangle {
+
+        position:absolute;
+        top: -5vw;
+        left: 11vw;
+        z-index:-1;
+    }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .about .triangle svg {
+
+            width: 15vw;
+            height: 15vw;
+            transform-origin: 60% 50%;
+            animation: rotate 60s linear infinite;
+        }
+    
 
 .works {
+    /*border: 2px solid #e83a82;*/
+    position: relative;
 }
+
+        .works h1{
+           margin-top:-5vw;
+           margin-left:50vw;
+        }
+
+        .works .triangle {
+            position:absolute;
+            top:-12vw;
+            left:44vw;
+            z-index:-1;
+        }
+
+        /*@keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        } */
+
+        .works .triangle svg{
+            animation: rotate 25s linear infinite;
+            transform-origin: 50% 50%;
+            width:30vw;
+            height:30vw;
+        }
 
     .work {
         width:100%;  
@@ -126,7 +182,6 @@ p {
         display:flex;
         margin-bottom: 5vw;
         padding: 0 5vw;
-
     }
 
     .work.full-width {
@@ -134,10 +189,11 @@ p {
     }
 
         .work a {
-            color:#bab4af;
+            color:#000000;
             text-decoration:none;
-            border-bottom: 2px solid #fcf8e7;
-            padding-bottom: 0.2vw;
+            background-color:#bab4af;
+            padding:0.25em 0.25em 0.2em 0.25em;
+/*             border-bottom: 2px solid #b0b2afbf; */
         }
 
         .work .media {
@@ -146,11 +202,16 @@ p {
 
             .work .video-container {
                 position:relative;
-                width:40vw;
+                width:50vw;
                 padding-bottom:56.25%;
                 /*border: 2px solid #45e83a;*/
 
+                filter:grayscale(70%) hue-rotate(180deg);
+                transition:filter 0.25s ease-in-out;
+            }
 
+            .work .video-container:hover {
+                filter:none;
             }
 
             .work .video-container iframe {
@@ -178,3 +239,92 @@ p {
             .work p:nth-child(odd){
                 padding-right:5vw;
             }
+
+
+.collaboration{
+    position:relative;
+    height:60vw;
+}
+
+    .collaboration h1 {
+        margin-top:16vw;
+        text-align:center;
+    }
+
+    .collaboration p {
+        margin-top:5em;
+        font-size:2.9vw;
+        padding-left:5vw;
+        padding-right:5vw;
+
+    }
+
+    .collaboration ul {
+        padding:3em 3em 3em 5em;
+        line-height:2em;
+        font-size:2vw;
+    }
+
+    .collaboration .triangle {
+        position:absolute;
+        top:-12vw;
+        left:41vw;
+        z-index:-1;
+    }
+
+    .collaboration .triangle svg {
+        animation: rotate 25s linear infinite;
+        transform-origin: 50% 50%;
+        width:30vw;
+        height:30vw;
+    }
+
+    .collaboration a{
+        color:#000000;
+        text-decoration:none;
+        background-color:#bab4af;
+        padding:0.25em 0.25em 0.2em 0.25em;
+    }
+
+.contact {
+    position:relative;
+    height:45vw;
+    background:linear-gradient(black,#bab4af);
+}
+
+    .contact h1 {
+        margin-left:9.8vw;
+        margin-top:6vw;
+        position: relative;
+        z-index:1;
+    }
+
+    .contact ul {
+        /*color:#FCF8E7;*/
+        color:#2f2d2b;
+        padding-top: 8em;
+        padding-left:9.8vw;
+        font-size:3vw;
+        line-height:1.8em;
+
+        letter-spacing:0.07em;
+        
+            
+    }
+
+    .contact li{
+        padding-left:40vw;
+    }
+
+    .contact .triangle {
+        position:absolute;
+        top:-6vw;
+        left:8vw;
+        /* z-index:-1; */
+    }
+
+    .contact .triangle svg {
+        animation: rotate 25s linear infinite;
+        transform-origin: 50% 50%;
+        height:20vw;
+    }
