@@ -300,20 +300,30 @@ p, ul {
     }
 
     .contact ul {
-        /*color:#FCF8E7;*/
-        color:#2f2d2b;
+        /*color:#2f2d2b;*/
         padding-top: 8em;
-        padding-left:9.8vw;
+        margin-left:9.8vw;
         font-size:3vw;
-        line-height:1.8em;
-
+        line-height:1.5em;
         letter-spacing:0.07em;
-        
+        list-style-image: url(/art/point.svg);
+
             
     }
 
     .contact li{
-        padding-left:40vw;
+        margin-left:28vw;
+        list-style:none;
+        background-image:url(/art/point.svg);
+        background-repeat: no-repeat;
+        background-position:50vw 1vw;
+        background-size: 4vw;
+    }
+
+    .contact li .opacity{
+        /*opacity:0.5;*/
+        color:#1d1c1bb0;
+
     }
 
     .contact .triangle {
