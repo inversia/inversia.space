@@ -4,18 +4,19 @@
 	<title>INVERSIA</title>
 	<link rel="stylesheet" href="reset.css"></link>
 	<link rel="stylesheet" href="index.css"></link>	
+	<script src="index.js"></script>
 </head>
 
 <body>
 	<div class="menu">
-		<a href="#" class="item">Contact</a> 
-		<a href="#" class="item">Works</a>
-		<a href="#" class="item">About</a> 
-		<a href="#" class="item">Collaborations</a> 
-		<a href="#" class="item">Something</a>
+		<a href="#about" class="item">About</a> 
+		<a href="#works" class="item">Works</a>
+		<a href="#collaboration" class="item">Collaboration</a>
+		<a href="#contact" class="item">Contact</a> 
+		<!--<a href="#" class="item">Something</a> -->
 	</div>
 	<div class="header">	
-		<div class="about">
+		<div id="about" class="about">
 			<h1>About</h1>
 			<p>I still don't know what to call what I do, so I called it NDM - No Dance Music.<br/>
 			But, sometimes I write something that people can still dance to.<br/>
@@ -49,7 +50,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="works">
+	<div id="works" class="works">
 		<h1>Works</h1>
 		<div class="triangle">	
 			<svg width="223px" height="224px" viewBox="0 0 223 224" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -81,10 +82,12 @@
 		</div>
 		<h2 style="text-align:right;">Electro<span style="position:relative; left:0.023em;">theater</span></h2>
 		<div class="work">
-			<p>Here is my soundtrack for 
-			the teaser of the spectakle "Faratyev's Fantasies" 
-			at the <a href="https://electrotheatre.ru/repertoire/spectacle.htm?id=66#">Stanislavsky Electrotheater.</a>
-			It entered the 10 best performances of 2017 in Moscow.</p>
+			<div style="display:flex;flex-direction:column;justify-content:flex-end;">
+				<p>Here is my soundtrack for 
+				the teaser of the spectakle "Faratyev's Fantasies" 
+				at the <a href="https://electrotheatre.ru/repertoire/spectacle.htm?id=66#">Stanislavsky Electrotheater.</a>
+				It entered the 10 best performances of 2017 in Moscow.</p>
+			</div>
 			<div class="media">
 				<div class="video-container">
 					<iframe src="https://www.youtube.com/embed/sPDl08xT8HQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -97,7 +100,7 @@
 		<h2>SuperDry</h2>
 		<div class="work">
 			<div class="media">
-				<div class="video-container">
+				<div class="video-container" style="padding-bottom: 51%;">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/00mhxS2ryTM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
@@ -107,7 +110,7 @@
 		<div class="work">
 			<p>My live performance at the poetic evening "Chtecy" and the soundtrack for the reportage video of that event.<a href="http://xn--4-jtb2brz.xn--p1ai/"> "Chtecy"</a> — is a creative project that conquers the cities of Russia</p>
 			<div class="media">
-				<div class="video-container">
+				<div class="video-container" style="padding-bottom: 60%;">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/fi7PiH3aKeM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
@@ -137,8 +140,8 @@
 		</div>
 		<img class ="work full-width" width ="100%" src="art/tykipyki.jpg">
 	</div>	
-	<div class="collaboration">
-		<h1>Collaborations</h1>
+	<div id="collaboration" class="collaboration">
+		<h1>Collaboration</h1>
 		<div class="triangle">	
 			<svg width="230px" height="248px" viewBox="0 0 230 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
@@ -172,7 +175,7 @@
 			<li><a href="https://leprosorium.bandcamp.com/album/leprosorium-grooves-9">Leprozorium grooves</a> - release in the collection of dark ambient.</li>
 		</ul>
 	</div>
-	<div class="contact">
+	<div id="contact" class="contact">
 		<h1>Contact</h1>
 		<div class="triangle">
 			
@@ -196,8 +199,8 @@
 			</svg>
 		</div>
 		<ul>
-			<li><span class="opacity">E-mail:</span> inversia8@icloud.com</li>
-			<li><span class="opacity">Telegram:</span> @inversia8</li>
+			<li><span class="opacity">E-mail:</span> <a href="mailto:inversia8@icloud.com">inversia8@icloud.com</a></li>
+			<li><span class="opacity">Telegram:</span> <a target="_blank" href="https://telegram.me/inversia8">@inversia8</a></li>
 		</ul>
 	</div>
 </body>

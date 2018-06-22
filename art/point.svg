@@ -1,17 +1,25 @@
 
-<svg width="69px" height="58px" viewBox="0 0 69 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="67px" height="57px" viewBox="0 0 67 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs>
         <radialGradient cx="50%" cy="37.562158%" fx="50%" fy="37.562158%" r="96.9304144%" gradientTransform="translate(0.500000,0.375622),scale(0.848889,1.000000),rotate(90.000000),translate(-0.500000,-0.375622)" id="radialGradient-1">
+            <stop stop-color="#BAB4AF" offset="0%"></stop>
+            <stop stop-color="#2A2A2A" offset="55.3897218%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="37.562158%" fx="50%" fy="37.562158%" r="96.9304144%" gradientTransform="translate(0.500000,0.375622),scale(0.848889,1.000000),rotate(90.000000),translate(-0.500000,-0.375622)" id="radialGradient-2">
             <stop stop-color="#BAB4AF" offset="0%"></stop>
             <stop stop-color="#2A2A2A" offset="69.1632045%"></stop>
             <stop stop-color="#000000" offset="100%"></stop>
         </radialGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-15-Copy" transform="translate(-163.000000, -1208.000000)" fill="url(#radialGradient-1)" stroke="#433C3C">
-            <polygon id="transparent-copy" points="197.491529 1265.86117 164 1209 230.983057 1209"></polygon>
+        <g id="Group-15-Copy" transform="translate(-164.000000, -1209.000000)">
+            <g id="Group-16" transform="translate(164.000000, 1209.000000)">
+                <polygon id="transparent-copy-2" stroke="#4D4848" fill="url(#radialGradient-1)" transform="translate(33.500000, 25.100000) scale(-1, -1) translate(-33.500000, -25.100000) " points="33.5 44.2 11 6 56 6"></polygon>
+                <polygon id="transparent-copy" fill="url(#radialGradient-2)" points="33.4915285 56.8611729 0 0 66.9830571 0"></polygon>
+            </g>
         </g>
     </g>
 </svg>
