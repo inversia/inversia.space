@@ -185,8 +185,11 @@ p, ul {
         width:100%;  
         /*border: 2px solid #e83a82;  */
         display:flex;
-        margin-bottom: 5vw;
         padding: 0 5vw;
+    }
+
+    .work:not(:last-child) {
+        margin-bottom: 5vw;
     }
 
     .work.full-width {
@@ -253,7 +256,7 @@ p, ul {
 }
 
     .collaboration h1 {
-        margin-top:16vw;
+        padding-top: 16vw;
         text-align:center;
     }
 
