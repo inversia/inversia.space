@@ -1,0 +1,58 @@
+
+<svg width="217px" height="262px" viewBox="0 0 217 262" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <ellipse id="path-1" cx="77" cy="74.5" rx="57" ry="57.5"></ellipse>
+        <filter x="-9.6%" y="-9.6%" width="119.3%" height="119.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.861314838   0 0 0 0 0.811679804   0 0 0 0 0.811679804  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-8.8%" y="-8.7%" width="117.5%" height="117.4%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="1" dy="-3" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="shadowSpreadInner2"></feMorphology>
+            <feGaussianBlur stdDeviation="1" in="shadowSpreadInner2" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <circle id="path-4" cx="76.5" cy="76.5" r="76.5"></circle>
+        <filter x="-27.1%" y="-25.8%" width="154.3%" height="154.3%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="12.34375" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-29.1%" y="-27.8%" width="158.2%" height="158.2%" filterUnits="objectBoundingBox" id="filter-6">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-17" transform="translate(31.000000, 31.000000)">
+            <path d="M7.60920895,211.947556 L14.7519185,211.947556 L19.4158795,207.283595 L19.4158795,202.91317 L14.7519185,198.249209 L7.60920895,198.249209 L7.60920895,211.947556 Z M7.60920895,214.556765 L7.60920895,229.559716 C7.60920895,229.907613 7.47874981,230.212017 7.21782761,230.47294 C6.95690541,230.733862 6.65250074,230.864321 6.30460448,230.864321 C5.95670821,230.864321 5.65230354,230.733862 5.39138134,230.47294 C5.13045914,230.212017 5,229.907613 5,229.559716 L5,196.944604 C5,196.596708 5.12502335,196.292304 5.37507379,196.031381 C5.62512423,195.770459 5.93496469,195.64 6.30460448,195.64 L15.3063754,195.64 C15.6542716,195.64 15.9586763,195.770459 16.2195985,196.031381 L21.6663222,201.44549 C21.9055009,201.684669 22.0250884,201.999945 22.0250884,202.391328 L22.0250884,207.805437 C22.0250884,208.19682 21.9055009,208.512096 21.6663222,208.751275 L16.2195985,214.165384 C15.9586763,214.426306 15.6542716,214.556765 15.3063754,214.556765 L7.60920895,214.556765 Z M62.2663813,195.64 C62.6142775,195.64 62.9186822,195.770459 63.1796044,196.031381 C63.4405266,196.292304 63.5709857,196.596708 63.5709857,196.944604 L63.5709857,224.112993 C63.5709857,224.504376 63.4513982,224.819652 63.2122195,225.058831 L57.7654958,230.47294 C57.5045736,230.733862 57.200169,230.864321 56.8522727,230.864321 L53.2972255,230.864321 C52.9493292,230.864321 52.6449246,230.733862 52.3840024,230.47294 L46.9372787,225.058831 C46.6763565,224.797909 46.5458973,224.482632 46.5458973,224.112993 L46.5458973,196.944604 C46.5458973,196.596708 46.6763565,196.292304 46.9372787,196.031381 C47.1982009,195.770459 47.5026055,195.64 47.8505018,195.64 C48.1983981,195.64 48.5028027,195.770459 48.7637249,196.031381 C49.0246471,196.292304 49.1551063,196.596708 49.1551063,196.944604 L49.1551063,223.591151 L53.8516824,228.255112 L56.2978158,228.255112 L60.9617768,223.591151 L60.9617768,196.944604 C60.9617768,196.596708 61.0922359,196.292304 61.3531581,196.031381 C61.6140803,195.770459 61.918485,195.64 62.2663813,195.64 Z M105.573495,202.391328 C105.573495,202.760968 105.443036,203.070808 105.182113,203.320859 C104.921191,203.570909 104.616786,203.695933 104.26889,203.695933 C103.920994,203.695933 103.616589,203.565473 103.355667,203.304551 L98.3003247,198.249209 L95.8215762,198.249209 L91.1576152,202.91317 L91.1576152,207.153135 L105.051653,217.655201 C105.399549,217.937866 105.573495,218.285757 105.573495,218.698884 L105.573495,224.112993 C105.573495,224.482632 105.443036,224.797909 105.182113,225.058831 L99.7680047,230.47294 C99.5070825,230.733862 99.2026779,230.864321 98.8547816,230.864321 L95.2997344,230.864321 C94.9518381,230.864321 94.6474335,230.733862 94.3865113,230.47294 L88.9397876,225.058831 C88.6788654,224.797909 88.5484062,224.482632 88.5484062,224.112993 C88.5484062,223.743353 88.6788654,223.433512 88.9397876,223.183462 C89.2007098,222.933412 89.5051144,222.808388 89.8530107,222.808388 C90.200907,222.808388 90.5053116,222.938847 90.7662338,223.19977 L95.8215762,228.255112 L98.3003247,228.255112 L102.964286,223.591151 L102.964286,219.351186 L89.070248,208.84912 C88.7223518,208.588198 88.5484062,208.240307 88.5484062,207.805437 L88.5484062,202.391328 C88.5484062,202.021688 88.6788654,201.706412 88.9397876,201.44549 L94.3865113,196.031381 C94.6474335,195.770459 94.9518381,195.64 95.2997344,195.64 L98.8547816,195.64 C99.2026779,195.64 99.5070825,195.770459 99.7680047,196.031381 L105.182113,201.44549 C105.443036,201.706412 105.573495,202.021688 105.573495,202.391328 Z M132.279516,195.64 C132.627412,195.64 132.931817,195.770459 133.192739,196.031381 C133.453661,196.292304 133.584121,196.596708 133.584121,196.944604 L133.584121,211.947556 L145.390791,211.947556 L145.390791,196.944604 C145.390791,196.596708 145.52125,196.292304 145.782172,196.031381 C146.043095,195.770459 146.347499,195.64 146.695396,195.64 C147.043292,195.64 147.347696,195.770459 147.608619,196.031381 C147.869541,196.292304 148,196.596708 148,196.944604 L148,229.559716 C148,229.907613 147.869541,230.212017 147.608619,230.47294 C147.347696,230.733862 147.043292,230.864321 146.695396,230.864321 C146.347499,230.864321 146.043095,230.733862 145.782172,230.47294 C145.52125,230.212017 145.390791,229.907613 145.390791,229.559716 L145.390791,214.556765 L133.584121,214.556765 L133.584121,229.559716 C133.584121,229.907613 133.453661,230.212017 133.192739,230.47294 C132.931817,230.733862 132.627412,230.864321 132.279516,230.864321 C131.93162,230.864321 131.627215,230.733862 131.366293,230.47294 C131.105371,230.212017 130.974912,229.907613 130.974912,229.559716 L130.974912,196.944604 C130.974912,196.596708 131.105371,196.292304 131.366293,196.031381 C131.627215,195.770459 131.93162,195.64 132.279516,195.64 Z" id="PUSH-Copy" fill="#FCF8E7"></path>
+            <g id="Group-2-Copy-2">
+                <g id="Oval-2">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use stroke="#979797" stroke-width="1" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group" opacity="0.594419643">
+                    <g id="Oval" filter="url(#filter-5)">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-4"></use>
+                        <use stroke="#979797" stroke-width="1" fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
