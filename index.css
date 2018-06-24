@@ -102,18 +102,25 @@ p, ul {
     font-family:Ubuntu;
 }
 
-
+.image {
+    width:100%;
+    background-attachment:fixed;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
 
 .about {
     /*border: 2px solid #e83a82;*/
     padding:0px 10%;
-    margin-top: 64vw;
-    background-image:url(/art/knopa.svg);
+    padding-top: 9.4vw;
+    margin-top: 55.6vw;
+    background-image:url(/art/lineteeth.svg);
     background-repeat:no-repeat;
     background-size:contain;
-    background-position: 0 35vw;
+    background-position: 0 50vw;
     position:relative;
-    height:84vw;
+    height:85vw;
 }
 
 
@@ -125,7 +132,7 @@ p, ul {
     }
 
     .about h1 {
-        margin-top:17%;
+        
         margin-bottom:1.4em;
 
     }
@@ -133,7 +140,7 @@ p, ul {
     .about .triangle {
 
         position:absolute;
-        top: -5vw;
+        top:4vw;
         left: 11vw;
         z-index:-1;
     }
@@ -155,6 +162,8 @@ p, ul {
 .works {
     /*border: 2px solid #e83a82;*/
     position: relative;
+    padding-top:20vw;
+    margin-top:-25vw;
 }
 
         .works h1{
@@ -164,7 +173,7 @@ p, ul {
 
         .works .triangle {
             position:absolute;
-            top:-12vw;
+            top:2vw;
             left:44vw;
             z-index:-1;
         }
@@ -276,7 +285,7 @@ p, ul {
 
     .collaboration .triangle {
         position:absolute;
-        top:-12vw;
+        top:2vw;
         left:41vw;
         z-index:-1;
     }
@@ -302,6 +311,7 @@ p, ul {
     background-position: bottom right;
     background-size:90%, 100%;
     background-repeat:no-repeat, repeat;
+    margin-top:21.5vw;
 } 
 
     .contact a {
