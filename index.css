@@ -36,6 +36,16 @@ body {
     font-family:Angoola;
     color:#FCF8E7;
     background-color: #010101;
+}
+
+body.inverted {
+    background-color:white;
+    filter: invert(100%);
+    top: 0;
+    position: absolute;
+}
+
+.logo {
     background-image: url(./art/tri-left.svg),
                       url(./art/tri-right.svg),
                       url(./art/inversialogo.svg);
@@ -45,9 +55,12 @@ body {
     background-position: left 5vw,
                          right 5vw,
                          center 14vw;
-                      /*     filter:invert(100%);
-    background-color:white; */
-                      }
+    position:absolute;
+    width:100%;
+    height:100vw;
+    top:0;
+    
+}
 
 div {
     box-sizing:border-box;
@@ -114,7 +127,7 @@ p, ul {
     /*border: 2px solid #e83a82;*/
     padding:0px 10%;
     padding-top: 9.4vw;
-    margin-top: 55.6vw;
+    margin-top: 53.6vw;
     background-image:url(/art/lineteeth.svg);
     background-repeat:no-repeat;
     background-size:contain;
@@ -135,6 +148,17 @@ p, ul {
         
         margin-bottom:1.4em;
 
+    }
+
+    .about .knopa {
+        /*border: 2px solid #e83a82;*/
+        background-image:url(/art/knopa.svg);
+        background-repeat:no-repeat;
+        background-position:right;
+        background-size:19vw;
+        height:25vw;
+        margin:-16vw -9vw 0 70vw;
+        cursor: pointer;
     }
 
     .about .triangle {
@@ -167,14 +191,14 @@ p, ul {
 }
 
         .works h1{
-           margin-top:-5vw;
-           margin-left:50vw;
+           margin-top:-8vw;
+           margin-left:55vw;
         }
 
         .works .triangle {
             position:absolute;
             top:2vw;
-            left:44vw;
+            left:47vw;
             z-index:-1;
         }
 
