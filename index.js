@@ -48,5 +48,30 @@ setInterval (function () {
 
             currentActiveElement.style.filter = 'none';
         }
-    }
+    } 
 }, 100)
+
+
+document.addEventListener ('DOMContentLoaded', () => {
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|CriOS/i.test(navigator.userAgent)
+
+    if (isMobile) {
+
+        document.body.classList.add ('mobile')
+
+        document.addEventListener ('scroll', () => {
+
+            const images = document.querySelectorAll ('.parallax .pic')
+
+            for (const image of images) {
+
+                const clientRect = image.getBoundingClientRect()
+                const pageTop    = clientRect.top + window.scrollY
+
+                image.style.backgroundPosition = 'center ' + (window.scrollY - pageTop) + 'px'
+            }
+        })
+    }
+
+}) 
