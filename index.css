@@ -65,31 +65,30 @@ div {
     box-sizing:border-box;
 }
 
-.menu {
-    font-size:2.5vw;
-    display:flex; 
-    /*border: 2px solid #e83a82; */
-    justify-content: space-around;
-    padding: 0 3em;
-    padding-top: 2.1em;
-    position: absolute;
-    width: 100%;
-    top: 0;
-}
-
-    .menu a {
-
-        padding: 0 25px;
-        color: #FCF8E7;
-        text-decoration: none;
-/*         border: 2px solid #e83a82; */
-    }
-
 .header{
     /* border: 2px solid #e83a82; */
     width: 100%;
+    position:relative;
+    margin-top:30px;
 }
 
+    .menu {
+        font-size:2.5vw;
+        display:flex; 
+        /*border: 2px solid #e83a82; */
+        justify-content: space-around;
+        padding: 0 3em;
+        padding-top: 2.1em;
+        width: 100%;
+        top: 0;
+    }
+
+        .menu a {
+
+            padding: 0 25px;
+            color: #FCF8E7;
+            text-decoration: none;
+        }
 
 h2{
     text-align: left;
@@ -151,7 +150,7 @@ p, ul {
 .about {
     /*border: 2px solid #e83a82;*/
     padding:0px 10%;
-    padding-top: 9.4vw;
+    padding-top: 1.8vw;
     margin-top: 53.6vw;
     background-image:url(/art/lineteeth.svg);
     background-repeat:no-repeat;
@@ -189,7 +188,7 @@ p, ul {
     .about .triangle {
 
         position:absolute;
-        top:4vw;
+        top:-4vw;
         left: 11vw;
         z-index:-1;
     }

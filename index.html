@@ -3,8 +3,10 @@
 <head>
 	<title>INVERSIA</title>
 	<link rel="stylesheet" href="reset.css"></link>
-	<link rel="stylesheet" href="index.css"></link>	
+	<link rel="stylesheet" href="index.css"></link>
+	<link rel="stylesheet" href="audio.css"></link>	
 	<script src="index.js"></script>
+	<script src="audio.js"></script>
 
 	<title>INVERSIA music | musical production</title>
     <meta charset="UTF-8">
@@ -44,14 +46,14 @@
 </head>
 
 <body>
-	<div class="menu">
-		<a href="#about" class="link">About</a> 
-		<a href="#works" class="link">Works</a>
-		<a href="#collaboration" class="link">Collaboration</a>
-		<a href="#contact" class="link">Contact</a> 
-		<!--<a href="#" class="item">Something</a> -->
-	</div>
 	<div class="header">
+		<div class="menu">
+			<a href="#about" class="link">About</a> 
+			<a href="#works" class="link">Works</a>
+			<a href="#collaboration" class="link">Collaboration</a>
+			<a href="#contact" class="link">Contact</a> 
+			<!--<a href="#" class="item">Something</a> -->
+		</div>
 		<div class="logo"></div>
 		<div id="about" class="about">
 			<h1>About</h1>
@@ -87,6 +89,19 @@
 					</g>
 				</svg>
 			</div>
+		</div>
+	</div>
+	<div class="player">
+		<audio>
+			<source src="">
+		</audio>
+		<div class="buttons">
+			<div class="button backward"></div>
+			<div class="button play"></div>
+			<div class="button forward"></div>
+		</div>
+		<div class="audioline">
+			<div class="progress"></div>  
 		</div>
 	</div>
 	<div id="works" class="works">

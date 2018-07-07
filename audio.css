@@ -1,0 +1,74 @@
+.player {
+  
+  display:flex;
+  align-items:center;
+  position:fixed;
+  top:0px;
+  background-color:#000000d1;
+  left:0px;
+  right:0px;
+  z-index:3;
+  -webkit-backdrop-filter:blur(40px);
+  backdrop-filter:blur(20px); 
+}
+
+  .player .buttons {
+    width:200px;
+    display:flex;
+    align-items:center;
+  }
+
+    .button {
+      flex:1;
+      padding-top:25%;
+    }
+
+    .play {
+
+      background-image: url('data:image/svg+xml;utf8,<svg width="86px" height="88px" viewBox="0 0 86 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --><desc>Created with Sketch.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group-19"><g id="noun_play_366738"><path d="M31.7,59.08 C31.6991966,59.5831626 31.9762666,60.0456541 32.4202921,60.2823281 C32.8643176,60.519002 33.4027339,60.4911801 33.82,60.21 L58.14,43.32 C58.5001274,43.065052 58.7141883,42.6512372 58.7141883,42.21 C58.7141883,41.7687628 58.5001274,41.354948 58.14,41.1 L33.82,24.21 C33.4042215,23.9298112 32.868006,23.9011085 32.4246929,24.1353116 C31.9813799,24.3695148 31.7028809,24.8286326 31.7,25.33 L31.7,59.08 Z M34.38,27.84 L55.49,42.21 L34.39,56.57 L34.39,27.85 L34.38,27.84 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M42.21,81 C20.7868746,81 3.42,63.6331254 3.42,42.21 C3.42,20.7868746 20.7868746,3.42 42.21,3.42 C63.6331254,3.42 81,20.7868746 81,42.21 C80.9779521,63.6239863 63.6239863,80.9779521 42.21,81 Z M42.21,7.39 C28.1216701,7.39000058 15.4207561,15.87714 10.0303203,28.8934468 C4.63988451,41.9097535 7.62162477,56.8915418 17.5850085,66.852065 C27.5483923,76.8125882 42.5310362,79.7900263 55.5457945,74.3958531 C68.5605528,69.0016799 77.0440449,56.2983293 77.04,42.21 C77.0179571,22.9830601 61.4369399,7.40204295 42.21,7.38 L42.21,7.39 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M1.65,17.47 C3.14156698,14.8905871 4.87611094,12.4595467 6.83,10.21 L9.83,12.81 C8.04103342,14.8736087 6.45378903,17.1037875 5.09,19.47 L1.65,17.47 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M33.67,86.43 L34.42,82.72 C37.1019295,83.212864 39.8231592,83.4605528 42.55,83.46 L42.73,83.46 L42.73,87.21 L42.56,87.21 C39.5791403,87.220231 36.6035346,86.9591543 33.67,86.43 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M78.8,19.3 L82.22,17.3 C83.7213389,19.8805359 84.9704481,22.5997762 85.95,25.42 L82.21,26.72 C81.3147122,24.1427139 80.1727507,21.6578591 78.8,19.3 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M59.61,4.29 C74.4268186,11.0938903 83.9224535,25.9056745 83.9200005,42.21" id="Shape" stroke="#D8D8D8"></path><path d="M21.54,5.97 C27.8343199,2.37344186 34.960618,0.487575832 42.21,0.5" id="Shape" stroke="#D8D8D8"></path><path d="M42.75,83.92 L42.21,83.92 C29.2085471,83.9088712 16.9543977,77.8414126 9.0637938,67.5081521 C1.17318988,57.1748917 -1.45308203,43.7554682 1.96,31.21" id="Shape" stroke="#D8D8D8"></path><path d="M42.21,74.11 C59.8278835,74.11 74.11,59.8278835 74.11,42.21 C74.11,24.5921165 59.8278835,10.31 42.21,10.31 C24.5921165,10.31 10.31,24.5921165 10.31,42.21 C10.31,59.8278835 24.5921165,74.11 42.21,74.11 Z" id="Oval" stroke="#D8D8D8" stroke-dasharray="3.04"></path></g></g></g></svg>');
+      background-size:55%;
+      background-position:50% 56%;
+      background-repeat:no-repeat;  
+      cursor:pointer;
+    }
+
+      .play.pause{
+
+        background-image: url('data:image/svg+xml;utf8,<svg width="86px" height="88px" viewBox="0 0 86 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --><desc>Created with Sketch.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group-20"><g id="noun_play_366738-copy"><path d="M42.21,81 C20.7868746,81 3.42,63.6331254 3.42,42.21 C3.42,20.7868746 20.7868746,3.42 42.21,3.42 C63.6331254,3.42 81,20.7868746 81,42.21 C80.9779521,63.6239863 63.6239863,80.9779521 42.21,81 Z M42.21,7.39 C28.1216701,7.39000058 15.4207561,15.87714 10.0303203,28.8934468 C4.63988451,41.9097535 7.62162477,56.8915418 17.5850085,66.852065 C27.5483923,76.8125882 42.5310362,79.7900263 55.5457945,74.3958531 C68.5605528,69.0016799 77.0440449,56.2983293 77.04,42.21 C77.0179571,22.9830601 61.4369399,7.40204295 42.21,7.38 L42.21,7.39 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M1.65,17.47 C3.14156698,14.8905871 4.87611094,12.4595467 6.83,10.21 L9.83,12.81 C8.04103342,14.8736087 6.45378903,17.1037875 5.09,19.47 L1.65,17.47 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M33.67,86.43 L34.42,82.72 C37.1019295,83.212864 39.8231592,83.4605528 42.55,83.46 L42.73,83.46 L42.73,87.21 L42.56,87.21 C39.5791403,87.220231 36.6035346,86.9591543 33.67,86.43 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M78.8,19.3 L82.22,17.3 C83.7213389,19.8805359 84.9704481,22.5997762 85.95,25.42 L82.21,26.72 C81.3147122,24.1427139 80.1727507,21.6578591 78.8,19.3 Z" id="Shape" fill="#D8D8D8" fill-rule="nonzero"></path><path d="M59.61,4.29 C74.4268186,11.0938903 83.9224535,25.9056745 83.9200005,42.21" id="Shape" stroke="#D8D8D8"></path><path d="M21.54,5.97 C27.8343199,2.37344186 34.960618,0.487575832 42.21,0.5" id="Shape" stroke="#D8D8D8"></path><path d="M42.75,83.92 L42.21,83.92 C29.2085471,83.9088712 16.9543977,77.8414126 9.0637938,67.5081521 C1.17318988,57.1748917 -1.45308203,43.7554682 1.96,31.21" id="Shape" stroke="#D8D8D8"></path><path d="M42.21,74.11 C59.8278835,74.11 74.11,59.8278835 74.11,42.21 C74.11,24.5921165 59.8278835,10.31 42.21,10.31 C24.5921165,10.31 10.31,24.5921165 10.31,42.21 C10.31,59.8278835 24.5921165,74.11 42.21,74.11 Z" id="Oval" stroke="#D8D8D8" stroke-dasharray="3.04"></path></g><rect id="Rectangle-4" fill="#D8D8D8" x="31" y="24" width="3" height="36" rx="1.5"></rect><rect id="Rectangle-4-Copy" fill="#D8D8D8" x="51" y="24" width="3" height="36" rx="1.5"></rect></g></g></svg>');
+
+      }
+
+
+    .backward {
+      background-image: url('data:image/svg+xml;utf8,<svg width="95px" height="76px" viewBox="0 0 95 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --><desc>Created with Sketch.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="noun_forward_155863-copy" transform="translate(48.500000, 37.500000) scale(-1, -1) translate(-48.500000, -37.500000) translate(4.000000, 3.000000)" stroke="#D8D8D8" stroke-width="4"><g id="Group"><polygon id="Shape" points="0.5 68.5 0.5 0.172 59.676 34.336"></polygon><polygon id="Shape" points="29.5 68.5 29.5 0.172 88.676 34.336"></polygon></g></g></g></svg>');
+      background-size:50%;
+      background-position:center center;
+      background-repeat:no-repeat;  
+      cursor:pointer;
+    }
+
+    .forward {
+      background-image: url('data:image/svg+xml;utf8,<svg width="95px" height="76px" viewBox="0 0 95 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --><desc>Created with Sketch.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="noun_forward_155863" transform="translate(2.000000, 4.000000)" stroke="#D8D8D8" stroke-width="4"><g id="Group"><polygon id="Shape" points="0.5 68.5 0.5 0.172 59.676 34.336"></polygon><polygon id="Shape" points="29.5 68.5 29.5 0.172 88.676 34.336"></polygon></g></g></g></svg>');
+      background-size:50%;
+      background-position:center center;
+      background-repeat:no-repeat;  
+      cursor:pointer;
+    }
+
+  .audioline {
+
+    flex:1;
+    border: 1px solid #D8D8D8;
+    cursor:pointer;
+    margin-left:10px;
+    margin-right:16px;
+    
+    
+  }
+
+    .audioline .progress {
+
+      background-color:#bab4af;
+      width:0%;
+      height:12px;      
+    }
