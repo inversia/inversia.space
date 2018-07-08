@@ -1,7 +1,3 @@
-const $  = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
-
-
 document.addEventListener ('DOMContentLoaded', () => {
     
     const smallScreen = (screen.width < 450)
@@ -45,12 +41,6 @@ document.addEventListener ('DOMContentLoaded', () => {
     function playerStateChanged (e) {
 
         $('.play').classList.toggle ('pause', isPlaying ())
-    }
-
-    function rescale (x, from, to) {
-
-        const t = (x - from[0]) / (from[1] - from[0]);
-        return to[0] + ((to[1] - to[0]) * t);
     }
 
     audio.onended = playerStateChanged

@@ -50,15 +50,16 @@ body.inverted {
                       url(./art/tri-right.svg),
                       url(./art/inversialogo.svg);
     background-repeat: no-repeat;
-    background-size: 18vw, 18vw, 43vw;
-    background-position: left 5vw,
-                         right 5vw,
+    background-size: 15vw, 15vw, 43vw;
+    background-position: left 4.5vw,
+                         right 4.5vw,
                          center 14vw;
     position:absolute;
     width:100%;
     height:100vw;
     top:0;
     pointer-events: none;
+    overflow:hidden;
 }
 
 div {
@@ -150,7 +151,7 @@ p, ul {
     /*border: 2px solid #e83a82;*/
     padding:0px 10%;
     padding-top: 1.8vw;
-    margin-top: 53.6vw;
+    margin-top: 45.5vw;
     background-image:url(/art/lineteeth.svg);
     background-repeat:no-repeat;
     background-size:contain;
@@ -411,3 +412,21 @@ p, ul {
         transform-origin: 50% 50%;
         height:20vw;
     }
+
+@keyframes star-anim {
+  0% { transform: translateY(100vmin); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.star {
+  opacity:0;
+  animation:star-anim linear;
+  position: absolute;
+  width: 3px;
+  border-radius:100%;
+  height: 100px;
+  background:#ffffff;
+  z-index:-1;
+  top: 0;
+}

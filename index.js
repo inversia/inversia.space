@@ -1,7 +1,11 @@
+const $  = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
 
+function rescale (x, from, to) {
 
-
-
+  const t = (x - from[0]) / (from[1] - from[0]);
+  return to[0] + ((to[1] - to[0]) * t);
+}
 
 // плавная прокрутка
 
@@ -74,4 +78,48 @@ document.addEventListener ('DOMContentLoaded', () => {
         })
     }
 
-}) 
+})
+
+// анимации
+
+document.addEventListener ('DOMContentLoaded', () => {
+
+    const { sin, floor, pow, random } = Math
+    
+    const N = 35
+    const stars = $('.logo .stars')
+
+    for (let i = 0; i < N; i++) {
+
+      const el = document.createElement ('DIV')
+      el.classList.add ('star')
+      stars.appendChild (el)
+      
+      const speed = rescale (pow (i / N, 5), [0, 1], [0.25, 1])
+      
+      const duration = (1 / pow (speed, 2)) * 0.5
+
+      el.style.backgroundColor   = 'rgba(216,216,216,' + rescale (speed, [0, 1], [0.25, 1]).toFixed (2) + ')'
+      el.style.animationDuration = duration.toFixed (2) + 's'
+      el.style.height            = (3 + pow (speed * 2.5, 4)).toFixed (0) + 'px'
+      el.style.animationDelay    = (random () * duration).toFixed (2) + 's'
+
+      function restartAnimation () {
+
+          el.style.animationName = 'none'
+
+          el.style.left = (random () * window.innerWidth).toFixed (0) + 'px'
+
+          setTimeout (() => { el.style.animationName = '' }, 0)
+      }
+
+      el.addEventListener ('animationend', restartAnimation)
+
+      restartAnimation ()
+    }
+
+    document.addEventListener ('scroll', () => {
+
+        stars.style.display = (window.scrollY > window.innerHeight) ? 'none' : ''
+    })
+})
