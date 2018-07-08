@@ -7,7 +7,7 @@ document.addEventListener ('DOMContentLoaded', () => {
         document.body.classList.add ('small-screen')
 
         const playerHeight = $('.player').offsetHeight
-        $('.header').style.marginTop = playerHeight + 'px'
+        $('.page').style.paddingTop = playerHeight + 'px'
     }
 })
 
@@ -49,7 +49,9 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     const tracks = [
         { name: 'Underwater tour', url: 'https://inversia.space/music/gentlewoman-Underwater_tour.mp3' },
-        { name: 'A Tribe Called Red', url: 'https://inversia.space/music/A_Tribe_Called_Red.mp3' }
+        { name: 'A Tribe Called Red', url: 'https://inversia.space/music/A_Tribe_Called_Red.mp3' },
+        { name: 'Lorem Ipsum Dolor', url: 'https://inversia.space/music/A_Tribe_Called_Red.mp3' },
+        { name: 'Sit Amet', url: 'https://inversia.space/music/A_Tribe_Called_Red.mp3' }
     ]
 
     let currentTrack = 0
@@ -94,5 +96,40 @@ document.addEventListener ('DOMContentLoaded', () => {
            onSeek (e)
        }
     }
-})
 
+    $('.playlist-button').onclick = function () {
+     
+        document.documentElement.classList.toggle ('playlist-visible')   
+    }
+
+    $('.playlist-button').onmouseenter = function () {
+        document.documentElement.classList.add ('playlist-visible')   
+    }
+
+    $('.playlist-menu').onmouseleave = function () {
+        document.documentElement.classList.remove ('playlist-visible')   
+    }
+
+    const playlistMenu = $('.playlist-menu')
+
+    for (let i = 0; i < tracks.length; i++) {
+
+        const track = tracks[i]
+
+        const li = document.createElement ('LI')
+        
+        li.innerText = track.name
+
+        li.onclick = function () {
+            changeTrack(i)
+        }
+
+        playlistMenu.appendChild (li)
+    }
+
+    document.addEventListener('scroll', function (){
+        
+        document.documentElement.classList.remove ('playlist-visible')
+
+    })
+})

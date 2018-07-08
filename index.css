@@ -26,9 +26,6 @@
     src:url(./fonts/Razer.ttf);
 }
 
-
-
-
 html {
 }
 
@@ -67,7 +64,7 @@ div {
 }
 
 .header{
-    /* border: 2px solid #e83a82; */
+    /* border: 2px solid #bab4af; */
     width: 100%;
     position:relative;
 }
