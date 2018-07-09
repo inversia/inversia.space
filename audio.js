@@ -48,10 +48,12 @@ document.addEventListener ('DOMContentLoaded', () => {
     audio.onpause = playerStateChanged
 
     const tracks = [
+        { name: 'Final cut', url: 'https://inversia.space/music/Final_cut.mp3' },
+        { name: 'Stroll', url: 'https://inversia.space/music/Stroll.mp3' },
+        { name: 'Izvrasheniye svista', url: 'https://inversia.space/music/izvrasheniye_svista.mp3' },
         { name: 'Underwater tour', url: 'https://inversia.space/music/gentlewoman-Underwater_tour.mp3' },
-        { name: 'A Tribe Called Red', url: 'https://inversia.space/music/A_Tribe_Called_Red.mp3' },
-        { name: 'Lorem Ipsum Dolor', url: 'https://inversia.space/music/A_Tribe_Called_Red.mp3' },
-        { name: 'Sit Amet', url: 'https://inversia.space/music/A_Tribe_Called_Red.mp3' }
+        
+        
     ]
 
     let currentTrack = 0
@@ -65,11 +67,11 @@ document.addEventListener ('DOMContentLoaded', () => {
         trackIndex = loopNumber (trackIndex, tracks.length)
 
         // получить текущий трек
-
         
+        changeTrack(trackIndex)
 
         // убрать active с элемента под номером currentTrack
-
+        currentTrack.classList.remove('.active')
 
         // добавить active элементу с номером trackIndex
 
