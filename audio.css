@@ -107,6 +107,10 @@
     display: none;
 }
 
+.small-screen .playlist-menu-bg {
+    display: none;
+}
+
 /*  Playlist    */
 
 .playlist-button {
@@ -159,6 +163,11 @@
         position:relative;
         cursor:pointer;
         
+    }
+
+    .playlist-menu li.active {
+
+        color:red;
     }
 
     .playlist-menu li:after {

@@ -62,12 +62,23 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     function changeTrack (trackIndex, autoplay = true) {
 
-        currentTrack = loopNumber (trackIndex, tracks.length)
+        trackIndex = loopNumber (trackIndex, tracks.length)
 
-        audio.querySelector ('source').src = tracks[currentTrack].url
+        // получить текущий трек
+
+        
+
+        // убрать active с элемента под номером currentTrack
+
+
+        // добавить active элементу с номером trackIndex
+
+        audio.querySelector ('source').src = tracks[trackIndex].url
         audio.load()
 
         if (autoplay) audio.play()
+
+        currentTrack = trackIndex
     }
 
     changeTrack (Math.floor (Math.random () * tracks.length), false)
