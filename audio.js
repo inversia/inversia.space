@@ -68,10 +68,10 @@ document.addEventListener ('DOMContentLoaded', () => {
 
         // получить текущий трек
         
-        changeTrack(trackIndex)
+        //changeTrack(trackIndex)
 
         // убрать active с элемента под номером currentTrack
-        currentTrack.classList.remove('.active')
+        //currentTrack.classList.remove('.active')
 
         // добавить active элементу с номером trackIndex
 
