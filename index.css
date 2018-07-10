@@ -33,6 +33,7 @@ body {
     font-family:Angoola;
     color:#FCF8E7;
     background-color: #010101;
+    overflow-x:hidden;
 }
 
 body.inverted {
