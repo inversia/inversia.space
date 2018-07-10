@@ -53,6 +53,7 @@ document.addEventListener ('DOMContentLoaded', () => {
         { name: 'Stroll', url: 'https://inversia.space/music/Stroll.mp3' },
         { name: 'Can you see me?', url: 'https://inversia.space/music/Can_you_see_me.mp3' },
         { name: 'Izvrasheniye svista', url: 'https://inversia.space/music/izvrasheniye_svista.mp3' },
+        { name: 'Io_oI', url: 'https://inversia.space/music/Io_oI.mp3' },
         { name: 'Underwater tour', url: 'https://inversia.space/music/gentlewoman-Underwater_tour.mp3' },
         
         
