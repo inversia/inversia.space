@@ -55,9 +55,21 @@ document.addEventListener ('DOMContentLoaded', () => {
         { name: 'Izvrasheniye svista', url: 'https://inversia.space/music/izvrasheniye_svista.mp3' },
         { name: 'Io_oI', url: 'https://inversia.space/music/Io_oI.mp3' },
         { name: 'Underwater tour', url: 'https://inversia.space/music/gentlewoman-Underwater_tour.mp3' },
-        
-        
     ]
+
+    const playlistMenu = $('.playlist-menu')
+
+    for (let i = 0; i < tracks.length; i++) {
+
+        const track = tracks[i]
+
+        const li = document.createElement ('LI')
+        
+        li.innerText = track.name
+        li.onclick = function () { changeTrack(i) }
+
+        playlistMenu.appendChild (li)
+    }
 
     let currentTrack = 0
 
@@ -67,16 +79,11 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     function changeTrack (trackIndex, autoplay = true) {
 
+        $$('.playlist-menu li')[currentTrack].classList.remove ('active')
+        
         trackIndex = loopNumber (trackIndex, tracks.length)
 
-        // получить текущий трек
-        
-        //changeTrack(trackIndex)
-
-        // убрать active с элемента под номером currentTrack
-        //currentTrack.classList.remove('.active')
-
-        // добавить active элементу с номером trackIndex
+        $$('.playlist-menu li')[trackIndex].classList.add ('active')
 
         audio.querySelector ('source').src = tracks[trackIndex].url
         audio.load()
@@ -124,23 +131,6 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     $('.playlist-menu').onmouseleave = function () {
         document.documentElement.classList.remove ('playlist-visible')   
-    }
-
-    const playlistMenu = $('.playlist-menu')
-
-    for (let i = 0; i < tracks.length; i++) {
-
-        const track = tracks[i]
-
-        const li = document.createElement ('LI')
-        
-        li.innerText = track.name
-
-        li.onclick = function () {
-            changeTrack(i)
-        }
-
-        playlistMenu.appendChild (li)
     }
 
     document.addEventListener('scroll', function (){

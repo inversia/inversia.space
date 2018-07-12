@@ -162,23 +162,38 @@
         color: rgba(0,0,0,0.65);
         position:relative;
         cursor:pointer;
-        
+        overflow:hidden;
     }
 
     .playlist-menu li.active {
 
-        color:red;
+        color:black;
+        position:relative;
+        text-shadow: 0px 0px 0px black;
     }
 
-    .playlist-menu li:after {
-        content: '';
-        width:100%;
-        position:absolute;
-        bottom:0;
-        left:1.2em;
-        height:1px;
-        background:linear-gradient(to right, #0000004d 0%, #1e1e1e4d 70%, #ffffff00 100%);
-    }
+        .playlist-menu li.active:before {
+            content:'';
+            display:block;
+            position:absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 14px 0 14px 12px;
+            border-color: transparent transparent transparent #1b1b1b;
+            left:-1;
+            top:16px;
+        }
+
+        .playlist-menu li:after {
+            content: '';
+            width:100%;
+            position:absolute;
+            bottom:0;
+            left:1.2em;
+            height:1px;
+            background:linear-gradient(to right, #0000004d 0%, #1e1e1e4d 70%, #ffffff00 100%);
+        }
 
 .page {
     transition: transform 0.25s ease-in-out;
