@@ -41,48 +41,24 @@ document.addEventListener ('DOMContentLoaded', () => {          // код вып
     }
 })
 
-// выделяет объекты <iframe> и отменяет им цветовой фильтр.
+// .video-container stuff
 
 document.addEventListener ('DOMContentLoaded', () => {
 
-    let currentActiveElement
-
-    setInterval (function () {
-        if (document.activeElement !== currentActiveElement) {
-
-            currentActiveElement = document.activeElement
-
-            if (currentActiveElement.tagName === 'IFRAME') {
-
-                currentActiveElement.style.filter = 'none';
-            }
-        } 
-    }, 100)
-
-    // то же самое для <video>
-
     for (const v of $$('video')) {
-        v.onplay = function () {
-            if (v.classList.contains ('not-played')) {
-                v.classList.remove ('not-played')
-                v.pause ()
-                v.currentTime = 0
-                v.play ()
-            }
+        
+        v.onplay = () => {
+            v.parentNode.classList.add ('played')
             v.style.filter = 'none'
         }
-        if (isMobile) {
-            v.currentTime = 0
-            v.controls = true
-        } else {
-            v.onclick = function () {
-                if (v.paused) {
-                    v.play ()
-                    v.controls = true
-                } else {
-                    v.pause ()
-                    v.controls = false
-                }
+
+        v.onclick = v.ontouchstart = () => {
+            if (v.paused) {
+                v.play ()
+                v.controls = true
+            } else {
+                v.pause ()
+                v.controls = false
             }
         }
     }
