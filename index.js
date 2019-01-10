@@ -70,7 +70,9 @@ document.addEventListener ('DOMContentLoaded', () => {
 
             for (const image of images) {
 
-                const clientRect = image.getBoundingClientRect()
+                const clientRect = image.getBoundingClientRect()       // возвращает размер элемента и его позицию относительно окна.
+
+
                 const pageTop    = clientRect.top + window.scrollY
 
                 image.style.backgroundPosition = 'center ' + (window.scrollY - pageTop) + 'px'
@@ -89,14 +91,18 @@ document.addEventListener ('DOMContentLoaded', () => {
     const N = 35
     const stars = $('.logo .stars')
 
+    const speeds = []
+
     for (let i = 0; i < N; i++) {
 
       const el = document.createElement ('DIV')
       el.classList.add ('star')
       stars.appendChild (el)
       
-      const speed = rescale (pow (i / N, 5), [0, 1], [0.25, 1])
+      const speed = rescale (pow (i / N, 5), [0, 1], [0.25, 1])  // переводит в нужный диапазон
       
+      speeds.push (speed)
+
       const duration = (1 / pow (speed, 2)) * 0.5
 
       el.style.backgroundColor   = 'rgba(216,216,216,' + rescale (speed, [0, 1], [0.25, 1]).toFixed (2) + ')'
@@ -110,13 +116,15 @@ document.addEventListener ('DOMContentLoaded', () => {
 
           el.style.left = (random () * window.innerWidth).toFixed (0) + 'px'
 
-          setTimeout (() => { el.style.animationName = '' }, 0)
+          setTimeout (() => { el.style.animationName = '' }, 0)   // оттяжечка по времени сделана для того, чтобы это не происходило одновременно (в одну итерацию event-loop)
       }
 
       el.addEventListener ('animationend', restartAnimation)
 
       restartAnimation ()
     }
+
+    console.log (speeds)
 
     document.addEventListener ('scroll', () => {
 
