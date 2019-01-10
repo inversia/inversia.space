@@ -269,7 +269,8 @@ p, ul {
                 /*border: 2px solid #45e83a;*/
             }
 
-            .work .video-container iframe {
+            .work .video-container iframe,
+            .work .video-container video {
 
                 transition:filter 0.25s ease-in-out;
                 filter:grayscale(70%) hue-rotate(180deg);
@@ -282,7 +283,8 @@ p, ul {
                 height: 100%;
             }
             
-            .work .video-container:hover iframe {
+            .work .video-container:hover iframe,
+            .work .video-container:hover video {
                 filter:none;
             }
 
