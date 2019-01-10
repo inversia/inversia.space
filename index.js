@@ -1,6 +1,8 @@
 const $  = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|CriOS/i.test(navigator.userAgent)
+
 function rescale (x, from, to) {
 
   const t = (x - from[0]) / (from[1] - from[0]);
@@ -63,18 +65,24 @@ document.addEventListener ('DOMContentLoaded', () => {
         v.onplay = function () {
             if (v.classList.contains ('not-played')) {
                 v.classList.remove ('not-played')
+                v.pause ()
                 v.currentTime = 0
+                v.play ()
             }
-            
             v.style.filter = 'none'
         }
-        v.onclick = function () {
-            if (v.paused) {
-                v.play ()
-                v.controls = true
-            } else {
-                v.pause ()
-                v.controls = false
+        if (isMobile) {
+            v.currentTime = 0
+            v.controls = true
+        } else {
+            v.onclick = function () {
+                if (v.paused) {
+                    v.play ()
+                    v.controls = true
+                } else {
+                    v.pause ()
+                    v.controls = false
+                }
             }
         }
     }
@@ -83,8 +91,6 @@ document.addEventListener ('DOMContentLoaded', () => {
 
 
 document.addEventListener ('DOMContentLoaded', () => {
-
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|CriOS/i.test(navigator.userAgent)
 
     if (isMobile) {
 
