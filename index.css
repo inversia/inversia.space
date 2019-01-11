@@ -269,7 +269,7 @@ p, ul {
                 cursor:pointer;
                 background-size:cover;
 
-                transition:filter 0.25s ease-in-out;
+/*                 transition:filter 0.25s ease-in-out; */
 /*                 filter:grayscale(70%) hue-rotate(180deg); */
             }
 
