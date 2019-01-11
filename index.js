@@ -58,7 +58,6 @@ document.addEventListener ('DOMContentLoaded', () => {
                 v.controls = true
             } else {
                 v.pause ()
-                v.controls = false
             }
         }
     }

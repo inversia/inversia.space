@@ -270,7 +270,7 @@ p, ul {
                 background-size:cover;
 
                 transition:filter 0.25s ease-in-out;
-                filter:grayscale(70%) hue-rotate(180deg);
+/*                 filter:grayscale(70%) hue-rotate(180deg); */
             }
 
             .work .video-container:hover {
@@ -298,7 +298,7 @@ p, ul {
             }
 
             .work .video-container:not(.played):before {
-                background: radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+/*                 background: radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)); */
             }
 
             .work .video-container iframe,
