@@ -1,3 +1,5 @@
+const { keys, values, entries, assign } = Object
+
 const $  = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
@@ -138,3 +140,39 @@ document.addEventListener ('DOMContentLoaded', () => {
         stars.style.display = (window.scrollY > window.innerHeight) ? 'none' : ''
     })
 })
+
+
+// цветовой глитч
+
+// function createGlitch (innerTextElement){
+
+//     const el = document.createElement ('DIV')
+//     el.innerText = innerTextElement.innerText
+//     el.classList.add = 'colorGlitch'
+//     el.style.position = 'absolute'
+//     el.style.mixBlendMode = 'screen'
+//     el.style.left = '2px'
+//     el.style.top = '-2px'
+//     innerTextElement.appendChild(el)
+// }
+
+document.addEventListener ('DOMContentLoaded', () => {
+
+    for (const h2 of document.querySelectorAll ('h2')) {
+        
+        h2.classList.add ('color-glitch')
+
+        const el = document.createElement ('DIV')
+        h2.appendChild(el)
+        el.innerText = h2.innerText
+
+        const el2 = document.createElement ('DIV')
+        el.appendChild(el2)
+        el2.innerText = el.innerText
+    }
+
+//     for (const glitch of document.querySelectorAll ('.colorGlitch')) {
+//         glitch.style.mixBlendMode = 'screen'
+//     }
+
+}) 

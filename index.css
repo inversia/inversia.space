@@ -88,7 +88,7 @@ div {
             text-decoration: none;
         }
 
-h2{
+h2 {
     text-align: left;
     color: #bab4af;
     font-size:14vw;
@@ -96,8 +96,30 @@ h2{
     text-stroke: 2px black;
     position:relative;
     z-index:1;
+    white-space:nowrap;
+    mix-blend-mode:screen;
 }
 
+h2.right,
+h2.right div {
+    text-align:right;
+    width:100%;
+}
+
+h2.color-glitch,
+h2.color-glitch div {
+    mix-blend-mode:screen;
+}
+
+h2.color-glitch div {
+    position:absolute;
+    left:0.29vw;
+    top:-0.29vw;
+}
+
+h2.color-glitch             { color:rgb(252,0,0); }
+h2.color-glitch > div       { color:rgb(0,248,0); }
+h2.color-glitch > div > div { color:rgb(0,0,231); }
 
 h1 {
     color:#FCF8E7; 
@@ -107,7 +129,7 @@ h1 {
 }
 
 p, ul {
-    color:#FCF8E7; 
+    color: #fcf8e7;
     font-family:Ubuntu;
 }
 
@@ -253,7 +275,7 @@ p, ul {
         .work a {
             color:#000000;
             text-decoration:none;
-            background-color:#bab4af;
+            background-color:rgb(186, 180, 175);
             padding:0.25em 0.25em 0.2em 0.25em;
 /*             border-bottom: 2px solid #b0b2afbf; */
         }
