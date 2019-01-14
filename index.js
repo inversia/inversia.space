@@ -158,13 +158,11 @@ document.addEventListener ('DOMContentLoaded', () => {
 
 document.addEventListener ('DOMContentLoaded', () => {
 
-    for (const h2 of document.querySelectorAll ('h2')) {
+    for (const parent of $$('.color-glitch')) {
         
-        h2.classList.add ('color-glitch')
-
         const el = document.createElement ('DIV')
-        h2.appendChild(el)
-        el.innerText = h2.innerText
+        parent.appendChild(el)
+        el.innerText = parent.innerText
 
         const el2 = document.createElement ('DIV')
         el.appendChild(el2)

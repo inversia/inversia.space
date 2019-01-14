@@ -46,7 +46,7 @@ body.inverted {
 .logo {
     background-image: url(./art/tri-left.svg),
                       url(./art/tri-right.svg),
-                      url(./art/inversialogo.svg);
+                      url(./art/purelogo.svg);
     background-repeat: no-repeat;
     background-size: 15vw, 15vw, 43vw;
     background-position: left 4.5vw,
@@ -59,6 +59,38 @@ body.inverted {
     pointer-events: none;
     overflow:hidden;
 }
+
+
+/* .logo-text .color-glitch,
+.logo-text .color-glitch div {
+    
+} */
+
+
+.logo-container {
+    display:flex;
+    position:relative;
+    width:100%;
+    justify-content:center;
+    bottom:-12vw;
+/*     border:cornflowerblue solid 2px; */
+    letter-spacing:0.15em;
+}
+
+.logo-text,
+.logo-text > div,
+.logo-text > div > div {
+    
+    position:absolute;
+    left:0.29vw;
+    top:-0.19vw;
+    font-size:11vw;
+}
+
+/* .logo .color-glitch             { color:rgb(252,0,0); }
+.logo .color-glitch > div       { color:rgb(0,248,0); }
+.logo .color-glitch > div > div { color:rgb(0,0,231); }
+ */
 
 div {
     box-sizing:border-box;
@@ -97,7 +129,6 @@ h2 {
     position:relative;
     z-index:1;
     white-space:nowrap;
-    mix-blend-mode:screen;
 }
 
 h2.right,
@@ -105,21 +136,6 @@ h2.right div {
     text-align:right;
     width:100%;
 }
-
-h2.color-glitch,
-h2.color-glitch div {
-    mix-blend-mode:screen;
-}
-
-h2.color-glitch div {
-    position:absolute;
-    left:0.29vw;
-    top:-0.29vw;
-}
-
-h2.color-glitch             { color:rgb(252,0,0); }
-h2.color-glitch > div       { color:rgb(0,248,0); }
-h2.color-glitch > div > div { color:rgb(0,0,231); }
 
 h1 {
     color:#FCF8E7; 
@@ -475,3 +491,21 @@ p, ul {
   z-index:-1;
   top: 0;
 }
+
+/* ------------------------- COLOR GLITCH ------------------------- */
+
+.color-glitch,
+.color-glitch div {
+    position:relative;
+    mix-blend-mode:screen;
+}
+
+.color-glitch div {
+    position:absolute;
+    left:0.29vw;
+    top:-0.29vw;
+}
+
+.color-glitch             { color:rgb(252,0,0); }
+.color-glitch > div       { color:rgb(0,248,0); }
+.color-glitch > div > div { color:rgb(0,0,231); }
