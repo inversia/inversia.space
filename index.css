@@ -113,12 +113,7 @@ div {
         top: 0;
     }
 
-        .menu a {
-
-            padding: 0 25px;
-            color: #FCF8E7;
-            text-decoration: none;
-        }
+        .menu a {padding: 0 25px;color: #faf7e8;text-decoration: none;}
 
 h2 {
     text-align: left;
