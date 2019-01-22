@@ -28,22 +28,22 @@
 
 @keyframes appearing {
 
-    0%   {opacity: 0; right: -20vw;   transform:scale(1.5);}
+    0%   {opacity: 0;transform:scale(1.5) translate(-40px,0px);}
     50%  {color:#00ffff36;}
-    100% {opacity: 1; right: 0vw;  transform:scale(1);   color:rgb(255, 0, 129)}
+    100% {opacity: 1;transform:scale(1) translate(0px,0px);color:rgb(255, 0, 129);}
 }
 
 @keyframes appearing1 {
 
-    0%   {opacity: 0; left: -10vw; transform:scale(0.5);color:#acde8724;}
+    0%   {opacity: 0; transform:scale(0.5) translate(0px,-40px);color:#acde8724;}
     50%  {color:#cde92e21;}
-    100% {opacity: 1; left: 0vw;  transform:scale(1);color:rgb(0,255,0);}
+    100% {opacity: 1; transform:scale(1) translate(0px,0px);color:rgb(0,255,0);}
 }
 
 @keyframes appearing2 {
 
-    0%   {opacity: 0; bottom: -30vw; transform:scale(0.9); color:#ffb400;}
-    100% {opacity: 1; bottom: 0vw;   transform:scale(1) ;color:rgb(0,0,255);}
+    0%   {opacity: 0; transform:scale(0.9); color:#ffb400;}
+    100% {opacity: 1; transform:scale(1) ;color:rgb(0,0,255);}
 }
 
 html {
