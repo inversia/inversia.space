@@ -133,8 +133,6 @@ document.addEventListener ('DOMContentLoaded', () => {
       restartAnimation ()
     }
 
-    console.log (speeds)
-
     document.addEventListener ('scroll', () => {
 
         stars.style.display = (window.scrollY > window.innerHeight) ? 'none' : ''
@@ -174,3 +172,16 @@ document.addEventListener ('DOMContentLoaded', () => {
 //     }
 
 }) 
+
+// const headings = $$('h1')
+
+window.addEventListener ('scroll', () => {
+
+    for(const h of $$('h2')){
+
+        const bottom = h.nextElementSibling.getBoundingClientRect().y
+        const top    = bottom - h.offsetHeight
+        
+        h.classList.toggle ('visible', (bottom > 0) && (top < window.innerHeight))
+    }
+})

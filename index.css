@@ -26,6 +26,26 @@
     src:url(./fonts/Razer.ttf);
 }
 
+@keyframes appearing {
+
+    0%   {opacity: 0; right: -20vw;   transform:scale(1.5);}
+    50%  {color:#00ffff36;}
+    100% {opacity: 1; right: 0vw;  transform:scale(1);   color:rgb(255, 0, 129)}
+}
+
+@keyframes appearing1 {
+
+    0%   {opacity: 0; left: -10vw; transform:scale(0.5);color:#acde8724;}
+    50%  {color:#cde92e21;}
+    100% {opacity: 1; left: 0vw;  transform:scale(1);color:rgb(0,255,0);}
+}
+
+@keyframes appearing2 {
+
+    0%   {opacity: 0; bottom: -30vw; transform:scale(0.9); color:#ffb400;}
+    100% {opacity: 1; bottom: 0vw;   transform:scale(1) ;color:rgb(0,0,255);}
+}
+
 html {
 }
 
@@ -75,6 +95,7 @@ body.inverted {
     bottom:-12vw;
 /*     border:cornflowerblue solid 2px; */
     letter-spacing:0.15em;
+    left:28%;
 }
 
 .logo-text,
@@ -86,6 +107,8 @@ body.inverted {
     top:-0.19vw;
     font-size:11vw;
 }
+
+
 
 /* .logo .color-glitch             { color:rgb(252,0,0); }
 .logo .color-glitch > div       { color:rgb(0,248,0); }
@@ -131,6 +154,24 @@ h2.right div {
     text-align:right;
     width:100%;
 }
+
+h2:not(.visible) {
+    opacity: 0;
+}
+
+h2.visible {
+    animation: appearing 0.5s ease-in-out;
+}
+
+    h2.visible > div {
+        animation: appearing1 0.55s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    h2.visible > div > div{
+        animation:appearing2 0.6s ease-out;
+    }
+
+
 
 h1 {
     color:#FCF8E7; 
