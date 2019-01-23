@@ -46,6 +46,13 @@
     100% {opacity: 1; transform:scale(1) ;color:rgb(0,0,255);}
 }
 
+@keyframes stroke {
+  0% { stroke-dashoffset: var(--stroke-dashoffset); }
+  60% { fill: transparent; }
+  90% { stroke-dashoffset: 0; stroke-width: 4px; }
+  100% { fill:var(--color); stroke-dashoffset: 0; stroke-width: 0px; }
+}
+
 html {
 }
 
@@ -95,7 +102,7 @@ body.inverted {
     bottom:-12vw;
 /*     border:cornflowerblue solid 2px; */
     letter-spacing:0.15em;
-    left:28%;
+    left:29%;
 }
 
 .logo-text,
@@ -106,6 +113,40 @@ body.inverted {
     left:0.29vw;
     top:-0.19vw;
     font-size:11vw;
+}
+
+
+#logo-text {
+  position: absolute;
+  top: 0;
+  z-index:2;
+}
+
+#logo-text path {
+  --stroke-dashoffset: 700;
+  --color: rgb(255,0,0);
+  fill: transparent;
+  stroke: var(--color);
+  stroke-width: 8px;
+  stroke-dasharray: 710;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: stroke 4s linear;
+  animation-fill-mode: forwards;
+  mix-blend-mode: color-dodge;
+  transform-origin: center;
+}
+
+#logo-text path ~ path {
+  --color: rgb(0,255,0);
+  transform:translate(-2px, 0px) ;
+  transform-origin: center;
+}
+
+#logo-text path ~ path ~ path {
+  --color: rgb(0,0,255);
+  transform: translate(-4px, 0px) ;
+  transform-origin: center;
 }
 
 
@@ -328,12 +369,13 @@ p, ul {
             color:#000000;
             text-decoration:none;
             background-color:rgb(186, 180, 175);
+            background-image: linear-gradient(to right, #E91E63, #FFC107);
             padding:0.25em 0.25em 0.2em 0.25em;
 /*             border-bottom: 2px solid #b0b2afbf; */
         }
 
         .work .media {
-            /*border: 2px solid #e83a82;*/
+            /*border: 2px solid #f32f80;*/
         }
 
             .work .video-container {
