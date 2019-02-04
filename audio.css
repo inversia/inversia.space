@@ -66,9 +66,10 @@
     }
 
         .audioline .progress {
-/*             background-image: linear-gradient(to right, #E91E63, #FFC107); */
-            background-image: linear-gradient(to right, #E91E63, #FFC107);
+            background-image: linear-gradient(to right, #f90659, #FFC107);
+/*             background-image: linear-gradient(to right, salmon, #FF9800); */
 /*             background-image: linear-gradient(to right, #ff93e4, #94fff2); */
+
             width:0%;
             height:12px;      
         }

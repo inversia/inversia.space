@@ -30,35 +30,28 @@
 
     0%   {opacity: 0;transform:scale(1.5) translate(-40px,0px) rotateY(180deg) rotate(10deg);}
     50%  {color:#00ffff36;}
-    100% {opacity: 1;transform:scale(1) translate(0px,0px) rotateY(0deg) rotate(0deg);color:rgb(255, 0, 129);}
+    100% {opacity: 1;transform:scale(1)   translate(0px,0px)   rotateY(0deg)   rotate(0deg);color:rgb(255, 0, 129);}
 }
 
 @keyframes appearing1 {
 
     0%   {opacity: 0; transform:scale(0.5) translate(0px,-40px);color:#acde8724;}
     50%  {color:#cde92e21;}
-    100% {opacity: 1; transform:scale(1) translate(0px,0px);color:rgb(0,255,0);}
+    100% {opacity: 1; transform:scale(1)   translate(0px,0px);  color:rgb(0,255,0);}
 }
 
 @keyframes appearing2 {
 
     0%   {opacity: 0; transform:scale(0.9); color:#ffb400;}
-    100% {opacity: 1; transform:scale(1) ;color:rgb(0,0,255);}
+    100% {opacity: 1; transform:scale(1) ;  color:rgb(0,0,255);}
 }
 
-@keyframes stroke {
-  0% { stroke-dashoffset: var(--stroke-dashoffset); }
-  60% { fill: transparent; }
-  90% { stroke-dashoffset: 0; stroke-width: 4px; }
-  100% { fill:var(--color); stroke-dashoffset: 0; stroke-width: 0px; }
-}
 
 html {
 }
 
 body {
     font-family:Angoola;
-    color:#FCF8E7;
     background-color: #010101;
     overflow-x:hidden;
 }
@@ -102,21 +95,20 @@ body.inverted {
     bottom:-12vw;
 /*     border:cornflowerblue solid 2px; */
     letter-spacing:0.15em;
-    left:29%;
 }
 
 .logo-text,
 .logo-text > div,
 .logo-text > div > div {
-    
+/*     
     position:absolute;
     left:0.29vw;
     top:-0.19vw;
-    font-size:11vw;
+    font-size:11vw; */
 }
 
 
-#logo-text {
+/* #logo-text {
   position: absolute;
   top: 0;
   z-index:2;
@@ -124,7 +116,7 @@ body.inverted {
 
 #logo-text path {
   --stroke-dashoffset: 700;
-  --color: rgb(255,0,0);
+  --color: rgb(250,0,0);
   fill: transparent;
   stroke: var(--color);
   stroke-width: 8px;
@@ -138,30 +130,29 @@ body.inverted {
 }
 
 #logo-text path ~ path {
-  --color: rgb(0,255,0);
+  --color: rgb(0,247,0);
   transform:translate(-2px, 0px) ;
   transform-origin: center;
-}
+}  
 
 #logo-text path ~ path ~ path {
-  --color: rgb(0,0,255);
-  transform: translate(-4px, 0px) ;
+  --color: rgb(0,0,232);
+  transform: translate(-4px, -1px) ;
   transform-origin: center;
+} */
+
+svg {
+  display:flex;
+  overflow:visible;
+  width:40vw;  
 }
-
-
-
-/* .logo .color-glitch             { color:rgb(252,0,0); }
-.logo .color-glitch > div       { color:rgb(0,248,0); }
-.logo .color-glitch > div > div { color:rgb(0,0,231); }
- */
 
 div {
     box-sizing:border-box;
 }
 
 .header{
-    /* border: 2px solid #bab4af; */
+    /* border: 2px solid #f2f0e1; */
     width: 100%;
     position:relative;
 }
@@ -179,15 +170,23 @@ div {
 
         .menu a {padding: 0 25px;color: #faf7e8;text-decoration: none;}
 
+
 h2 {
     text-align: left;
-    color: #bab4af;
     font-size:14vw;
     margin-top: 0.8em;
     text-stroke: 2px black;
     position:relative;
-    z-index:1;
+    z-index:2;
     white-space:nowrap;
+    background: linear-gradient(#FF9800,salmon 70%);
+    -webkit-background-clip: text;
+    color:transparent;
+}
+
+h2.color-glitch {
+  padding-top:1.2vw;
+  padding-bottom:7vw;
 }
 
 h2.right,
@@ -260,7 +259,7 @@ p, ul {
 }
 
 .about {
-    /*border: 2px solid #e83a82;*/
+    /*border: 2px solid #f3efde;*/
     padding:0px 10%;
     padding-top: 1.8vw;
     margin-top: 45.5vw;
@@ -368,10 +367,8 @@ p, ul {
         .work a {
             color:#000000;
             text-decoration:none;
-            background-color:rgb(186, 180, 175);
             background-image: linear-gradient(to right, #E91E63, #FFC107);
             padding:0.25em 0.25em 0.2em 0.25em;
-/*             border-bottom: 2px solid #b0b2afbf; */
         }
 
         .work .media {
@@ -384,6 +381,8 @@ p, ul {
                 padding-bottom: 51.25%;
                 cursor:pointer;
                 background-size:cover;
+                z-index:-2;
+                margin-top:-7vw;
 
 /*                 transition:filter 0.25s ease-in-out; */
 /*                 filter:grayscale(70%) hue-rotate(180deg); */
@@ -572,18 +571,98 @@ p, ul {
 
 /* ------------------------- COLOR GLITCH ------------------------- */
 
-.color-glitch,
-.color-glitch div {
-    position:relative;
-    mix-blend-mode:screen;
+@supports (mix-blend-mode: screen) {
+
+  h2.color-glitch {
+    padding:0vw;
+  }
+
+  .color-glitch,
+  .color-glitch div {
+      position:relative;
+      mix-blend-mode:screen;
+  }
+
+  .color-glitch div {
+      position:absolute;
+      top:-0.2vw;
+      left:0.5vw;
+  }
+
+  .color-glitch             { color:rgb(252,0,0); }
+  .color-glitch > div       { color:rgb(0,250,0); }
+  .color-glitch > div > div { color:rgb(0,0,250); } 
+
+  .work .video-container {
+      margin-top:0vw;
+  }
+
+
+@keyframes stroke {
+  
+  0% { stroke-dashoffset: 700; }
+  60% { fill: transparent; }
+  90% { stroke-dashoffset: 200; stroke-width: 0; }
+  100% { fill: var(--color); stroke-dashoffset: 0; stroke-width: 0; }
 }
 
-.color-glitch div {
-    position:absolute;
-    left:0.29vw;
-    top:-0.29vw;
+@keyframes scale {
+  
+  0% { transform: scale(1.05, 1) translate(2px, 6px); }
+  100% { transform: scale(1.02, 1) translate(1.1px, 1px); }
 }
 
-.color-glitch             { color:rgb(252,0,0); }
-.color-glitch > div       { color:rgb(0,248,0); }
-.color-glitch > div > div { color:rgb(0,0,231); }
+@keyframes scale2 {
+  
+  0% { transform: scale(1.07, 1) translate(2px, 6px); }
+  100% { transform: scale(1.024, 1) translate(4px, 2px); }
+}
+
+@keyframes scale3 {
+  
+  0% { transform: scale(1.07, 1) translate(4px, 7px); }
+  100% { transform: scale(1.024, 1) translate(-1px, -2px); }
+}
+
+
+
+#logo-text { 
+  position:relative;
+  display: block;
+  z-index:1;
+}
+
+#logo-text path {
+  --color: rgb(255,0,0);
+  fill: transparent;
+  stroke: var(--color);
+  stroke-width: 4px;
+  stroke-dasharray: 710;
+  stroke-dashoffset: 710;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: stroke 6s linear, scale3 5s linear;
+  animation-fill-mode: forwards;
+  mix-blend-mode: screen;
+  transform-origin:center;
+  translate(3.7px, 2px);
+}
+
+#logo-text path ~ path {
+  --color: rgb(0,255,0);
+  animation: stroke 6s linear, scale 5s linear;
+  animation-fill-mode: forwards;
+
+}
+
+#logo-text path ~ path ~ path {
+  --color: rgb(0,0,255);
+  animation: stroke 6s linear, scale2 5s linear;
+  animation-fill-mode: forwards;
+}
+
+.logo .color-glitch             { color:rgb(243,0,0); }
+.logo .color-glitch > div       { color:rgb(0,239,0); }
+.logo .color-glitch > div > div { color:rgb(0,0,222); }
+
+}

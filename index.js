@@ -25,6 +25,37 @@ function scrollTo(hash) {
 }
 
 
+// детекция поддержки свойства в браузере
+
+document.addEventListener ('DOMContentLoaded', () => {  
+    
+    const CSS_supports = (...args) => (window.CSS && CSS.supports) ? CSS.supports (...args) : false
+
+//         const CSS_supports = (...args) => false
+
+        if (CSS_supports ('mix-blend-mode: screen')) {
+
+            for (const parent of $$('.color-glitch')) {
+
+                const el = document.createElement ('DIV')
+                parent.appendChild(el)
+                el.innerText = parent.innerText
+
+                const el2 = document.createElement ('DIV')
+                el.appendChild(el2)
+                el2.innerText = el.innerText
+            }
+        } else {
+
+//             for (const parent of $$('.color-glitch')) {
+//                 parent.style.background = 'linear-gradient(#FF9800,salmon)'
+//                 parent.backgroundClip = 'text'
+//                 parent.style.color = 'transparent'
+//             }
+        }
+})
+
+
 document.addEventListener ('DOMContentLoaded', () => {          // код выполняющийся после загрузки DOM-дерева (содержимого document.body)
 
     for (const link of document.querySelectorAll ('.link')) {   // для каждого элемента с селектором .link
@@ -156,16 +187,16 @@ document.addEventListener ('DOMContentLoaded', () => {
 
 document.addEventListener ('DOMContentLoaded', () => {
 
-    for (const parent of $$('.color-glitch')) {
+//     for (const parent of $$('.color-glitch')) {            ДУБЛИРУЕТСЯ КОД
         
-        const el = document.createElement ('DIV')
-        parent.appendChild(el)
-        el.innerText = parent.innerText
+//         const el = document.createElement ('DIV')
+//         parent.appendChild(el)
+//         el.innerText = parent.innerText
 
-        const el2 = document.createElement ('DIV')
-        el.appendChild(el2)
-        el2.innerText = el.innerText
-    }
+//         const el2 = document.createElement ('DIV')
+//         el.appendChild(el2)
+//         el2.innerText = el.innerText
+//     }
 
 //     for (const glitch of document.querySelectorAll ('.colorGlitch')) {
 //         glitch.style.mixBlendMode = 'screen'
