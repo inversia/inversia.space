@@ -33,8 +33,8 @@
 }
 
 @keyframes knopa-pulse {
-    0%   {opacity:0.9; transform:scale(1); }
-    100% {opacity:1;   transform:scale(1.02);}
+    0%   {transform:scale(1)}
+    100% {transform:scale(1.05)}
     
 }
 
@@ -73,9 +73,12 @@ html.loading .loading-overlay {
 
   html .loading-overlay:before {
     content: 'Loading...';
-    color:#FCF8E7;
-    font-size:5vw;
+    background: linear-gradient(#fdb64c,#fa8072 80%);
+    -webkit-background-clip: text;
+    color:transparent;
+    font-size:8vw;
     animation: loading-pulse 0.7s ease-in-out alternate infinite;
+    padding:0.6em;
   }
 
 html.loading body {
@@ -86,6 +89,7 @@ html.loading .player,
 html.loading .playlist-button,
 html.loading .menu,
 html.loading .logo-container,
+html.loading .colored-triangles,
 html.loading #about,
 html.loading #works {
   opacity:0;
@@ -241,7 +245,7 @@ div {
         display:flex; 
         /*border: 2px solid #e83a82; */
         justify-content: space-around;
-        padding: 0 3em;
+        padding: 0em 3em;
         padding-top: 2.1em;
         width: 100%;
         top: 0;
@@ -249,7 +253,14 @@ div {
 
 /*         .menu a {padding: 0 25px;color: #faf7e8;text-decoration: none;} */
         
-          .menu a {padding: 0 25px;color:#fcfdfc;text-decoration: none;}
+          .menu a {
+            padding: 0.1em 2em;
+            color:#fcfdfc;
+            text-decoration:none;
+            background: linear-gradient(#fdb64c,#fa8072 80%);
+            -webkit-background-clip: text;
+            color:transparent;
+          }
 
 h2 {
     text-align: left;
@@ -294,11 +305,10 @@ h2.visible {
 
 
 h1 {
-    color:#FCF8E7;
-    color:#fcfdfc; 
     font-size:5vw;
-    
-       
+    background: linear-gradient(#fdb64c,salmon 80%);
+    -webkit-background-clip: text;
+    color:transparent;
 }
 
 p, ul {
@@ -364,7 +374,7 @@ p, ul {
     .about h1 {
         
         margin-bottom:1.4em;
-
+        padding:0.1em;  
     }
 
     .about .knopa {
@@ -445,12 +455,13 @@ p, ul {
 
     .work.full-width {
         padding: 0;
+        margin-bottom:13%
     }
 
         .work a {
             color:#000000;
             text-decoration:none;
-            background-image: linear-gradient(to right, #E91E63, #FFC107);
+            background-image: linear-gradient(to right, #ffaf39,salmon);
             padding:0.25em 0.25em 0.2em 0.25em;
         }
 
@@ -534,8 +545,9 @@ p, ul {
 }
 
     .collaboration h1 {
-        padding-top: 16vw;
+        padding-top: 1vw;
         text-align:center;
+
     }
 
     .collaboration p {
@@ -569,7 +581,8 @@ p, ul {
     .collaboration a{
         color:#000000;
         text-decoration:none;
-        background-color:#bab4af;
+        background:linear-gradient(to left, #ffc82c, salmon);
+/*         background: linear-gradient(to left, salmon, #ffc82c); */
         padding:0.25em 0.25em 0.2em 0.25em;
     }
 
@@ -592,6 +605,7 @@ p, ul {
     .contact h1 {
         margin-left:9.8vw;
         margin-top:6vw;
+        padding-top:0.1em;
         position: relative;
         z-index:1;
     }

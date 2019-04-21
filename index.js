@@ -228,9 +228,10 @@ window.addEventListener ('scroll', () => {
     }
 })
 
-//
+// выжидает, пока страница будет полностью загружена
 
-document.addEventListener ('DOMContentLoaded', () => {
-
-    setTimeout (() => document.documentElement.classList.remove ('loading'), 1000)
+document.addEventListener ('readystatechange', () => {
+    if (document.readyState === 'complete') {
+        document.documentElement.classList.remove ('loading')
+    }
 })

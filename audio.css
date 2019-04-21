@@ -27,9 +27,9 @@
 
         .button {
             flex:1;
-            padding-top:25%;
+            padding-top: 25%;
             cursor:pointer;
-            background-repeat:no-repeat;  
+            background-repeat:no-repeat;
         }
 
         .play {
@@ -66,7 +66,7 @@
     }
 
         .audioline .progress {
-            background-image: linear-gradient(to right, #f90659, #FFC107);
+            background-image: linear-gradient(to right, salmon, #ffc82c);
 /*             background-image: linear-gradient(to right, salmon, #FF9800); */
 /*             background-image: linear-gradient(to right, #ff93e4, #94fff2); */
 
