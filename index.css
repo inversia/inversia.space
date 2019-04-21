@@ -26,6 +26,18 @@
     src:url(./fonts/Razer.ttf);
 }
 
+@keyframes loading-pulse {
+    0%   {opacity:0.2; transform:scale(1); filter:blur(0.2vw); }
+    100% {opacity:1; transform:scale(1.02);}
+    
+}
+
+@keyframes knopa-pulse {
+    0%   {opacity:0.9; transform:scale(1); }
+    100% {opacity:1;   transform:scale(1.02);}
+    
+}
+
 @keyframes appearing {
 
     0%   {opacity: 0;transform:scale(1.5) translate(-40px,0px) rotateY(180deg) rotate(10deg);}
@@ -46,8 +58,46 @@
     100% {opacity: 1; transform:scale(1) ;  color:rgb(0,0,255);}
 }
 
+.loading-overlay {
+  display:none;
+}
 
-html {
+html.loading .loading-overlay {
+  position:fixed;
+  display:block;
+  left:0;top:0;right:0;bottom:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+  html .loading-overlay:before {
+    content: 'Loading...';
+    color:#FCF8E7;
+    font-size:5vw;
+    animation: loading-pulse 0.7s ease-in-out alternate infinite;
+  }
+
+html.loading body {
+  overflow-y: hidden;
+}
+
+html.loading .player,
+html.loading .playlist-button,
+html.loading .menu,
+html.loading .logo-container,
+html.loading #about,
+html.loading #works {
+  opacity:0;
+  pointer-events:none;
+}
+
+html.loading #logo-text {
+  display:none;
+}
+
+html.loading .logo {
+  background:none;
 }
 
 body {
@@ -64,14 +114,10 @@ body.inverted {
 }
 
 .logo {
-    background-image: url(./art/tri-left.svg),
-                      url(./art/tri-right.svg),
-                      url(./art/purelogo.svg);
+    background-image: url(./art/purelogo.svg);
     background-repeat: no-repeat;
-    background-size: 15vw, 15vw, 43vw;
-    background-position: left 4.5vw,
-                         right 4.5vw,
-                         center 14vw;
+    background-size: 43vw;
+    background-position: center 14vw;
     position:absolute;
     width:100%;
     height:100vw;
@@ -86,6 +132,33 @@ body.inverted {
     
 } */
 
+.colored-triangles{
+  display:flex;
+  position:absolute;
+  height:51.7vw;
+  width:100%;
+  opacity:1.5;
+  top:4.5vw;
+/*   background-color:red; */
+}
+
+  .colored-triangles .left{
+      position:absolute;
+      height:100%;
+      width:15vw;
+      left:0;
+  }
+
+    .colored-triangles #triangle-left-gradient {
+    }
+
+  .colored-triangles .right{
+      position:absolute;
+      height:100%;
+      width:15vw;
+      right:0;
+  }
+
 
 .logo-container {
     display:flex;
@@ -95,6 +168,10 @@ body.inverted {
     bottom:-12vw;
 /*     border:cornflowerblue solid 2px; */
     letter-spacing:0.15em;
+}
+
+.logo-text {
+  height: 15.5vw;
 }
 
 .logo-text,
@@ -142,9 +219,11 @@ body.inverted {
 } */
 
 svg {
-  display:flex;
-  overflow:visible;
-  width:40vw;  
+    overflow:visible;
+}
+
+#logo-text, .triangle svg {
+    width:45vw;
 }
 
 div {
@@ -185,8 +264,8 @@ h2 {
 }
 
 h2.color-glitch {
-  padding-top:1.2vw;
-  padding-bottom:7vw;
+    padding-top:1.2vw;
+    padding-bottom:7vw;
 }
 
 h2.right,
@@ -294,6 +373,7 @@ p, ul {
         height:25vw;
         margin:-16vw -9vw 0 70vw;
         cursor: pointer;
+        animation: knopa-pulse 1.1s ease-in-out alternate infinite;
     }
 
     .about .triangle {
@@ -623,8 +703,6 @@ p, ul {
   0% { transform: scale(1.07, 1) translate(4px, 7px); }
   100% { transform: scale(1.024, 1) translate(-1px, -2px); }
 }
-
-
 
 #logo-text { 
   position:relative;

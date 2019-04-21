@@ -120,6 +120,17 @@ document.addEventListener ('DOMContentLoaded', () => {
         })
     }
 
+    if (isMobile) {
+
+        for(const h of $$('h2')){
+            h.style.animation = 'none'
+        }
+
+        for(const h of $$('h2.visible')){
+            h.style.animation = 'none'
+        }
+    }
+
 })
 
 // анимации
@@ -215,4 +226,11 @@ window.addEventListener ('scroll', () => {
         
         h.classList.toggle ('visible', (bottom > 0) && (top < window.innerHeight))
     }
+})
+
+//
+
+document.addEventListener ('DOMContentLoaded', () => {
+
+    setTimeout (() => document.documentElement.classList.remove ('loading'), 1000)
 })
