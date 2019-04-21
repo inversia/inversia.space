@@ -247,8 +247,9 @@ div {
         top: 0;
     }
 
-        .menu a {padding: 0 25px;color: #faf7e8;text-decoration: none;}
-
+/*         .menu a {padding: 0 25px;color: #faf7e8;text-decoration: none;} */
+        
+          .menu a {padding: 0 25px;color:#fcfdfc;text-decoration: none;}
 
 h2 {
     text-align: left;
@@ -293,7 +294,8 @@ h2.visible {
 
 
 h1 {
-    color:#FCF8E7; 
+    color:#FCF8E7;
+    color:#fcfdfc; 
     font-size:5vw;
     
        
@@ -301,6 +303,7 @@ h1 {
 
 p, ul {
     color: #fcf8e7;
+    color:#fcfdfc;
     font-family:Ubuntu;
 }
 
