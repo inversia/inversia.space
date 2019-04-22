@@ -62,6 +62,10 @@
   display:none;
 }
 
+video:focus {
+  outline:none;
+}
+
 html.loading .loading-overlay {
   position:fixed;
   display:block;
@@ -169,14 +173,14 @@ body.inverted {
     position:relative;
     width:100%;
     justify-content:center;
-    bottom:-10vw;
-/*     border:cornflowerblue solid 2px; */
+    bottom:-6vw;
+    /*     border:cornflowerblue solid 2px; */
     letter-spacing:0.15em;
-    transform:scale(1.17);
 }
 
 .logo-text {
   height: 12.5vw;
+  transform:scale(1.17);
 }
 
 .logo-text,
@@ -242,12 +246,12 @@ div {
 }
 
     .menu {
-        font-size:3.0vw;
+        font-size:2.8vw;
         display:flex; 
         /*border: 2px solid #e83a82; */
         justify-content: space-around;
 /*         padding: 0em 3em; */
-        padding-top: 1.4em;
+        padding:1.4em 3em;
         width: 100%;
         top: 0;
     }
@@ -256,7 +260,6 @@ div {
         
           .menu a {
             padding: .6vw 0vw;
-            color:#fcfdfc;
             text-decoration:none;
             background: linear-gradient(#fdb64c,#fa8072 80%);
             -webkit-background-clip: text;
@@ -280,6 +283,7 @@ h2 {
 h2.color-glitch {
     padding-top:1.2vw;
     padding-bottom:7vw;
+    z-index:2;
 }
 
 h2.right,
@@ -288,19 +292,19 @@ h2.right div {
     width:100%;
 }
 
-h2:not(.visible) {
+html:not(.mobile) h2:not(.visible) {
     opacity: 0;
 }
 
-h2.visible {
+html:not(.mobile) h2.visible {
     animation: appearing 0.9s ease-in-out;
 }
 
-    h2.visible > div {
+    html:not(.mobile) h2.visible > div {
         animation: appearing1 0.95s cubic-bezier(0.4, 0, 1, 1);
     }
 
-    h2.visible > div > div{
+    html:not(.mobile) h2.visible > div > div{
         animation:appearing2 1.0s ease-out;
     }
 
@@ -314,7 +318,7 @@ h1 {
 }
 
 a {
-    z-index:5;
+    z-index:8;
 }
 
 p, ul {
@@ -423,6 +427,7 @@ p, ul {
     position: relative;
     padding-top:20vw;
     margin-top:-25vw;
+    overflow-x:hidden;
 }
 
         .works h1{
@@ -483,11 +488,9 @@ p, ul {
                 padding-bottom: 51.25%;
                 cursor:pointer;
                 background-size:cover;
-                z-index:-2;
                 margin-top:-7vw;
-
-/*                 transition:filter 0.25s ease-in-out; */
-/*                 filter:grayscale(70%) hue-rotate(180deg); */
+                /*                 transition:filter 0.25s ease-in-out; */
+                /*                 filter:grayscale(70%) hue-rotate(180deg); */
             }
 
             .work .video-container:hover {

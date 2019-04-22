@@ -1,14 +1,23 @@
 
 <svg width="1257px" height="472px" viewBox="0 0 1257 472" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <path d="M1049.5,0.5 L0.5,471.5" id="Line-2" stroke="#000000"></path>
-        <path d="M1049.5,0.5 L1256.5,375.5" id="Line-6" stroke="#000000"></path>
-        <path d="M1256.5,310.5 L929.5,7.5" id="Line-7" stroke="#000000"></path>
-        <path d="M929.5,7.5 L133.5,471.5" id="Line-8" stroke="#000000"></path>
-        <path d="M1256.5,224.5 L668.5,71.5" id="Line-9" stroke="#000000"></path>
-        <path d="M668.5,71.5 L344.5,471.5" id="Line-10" stroke="#000000"></path>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="36.2703174%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FA8072" offset="0%"></stop>
+            <stop stop-color="#FDC64C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="53.6196756%" y1="15.9216996%" x2="52.1116704%" y2="94.7310433%" id="linearGradient-2">
+            <stop stop-color="#FA8072" offset="0%"></stop>
+            <stop stop-color="#FDC64C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="end-copy-2">
+            <path d="M1049.5,0.5 L0.5,471.5" id="Line-2" stroke="#000000"></path>
+            <path d="M1048.85748,0.29431358 C1049.05722,0.655242419 1049.25696,1.01617126 1049.4567,1.3771001 C1095.46633,84.5155223 1164.48076,209.223156 1256.5,375.5" id="Line-6" stroke="#000000"></path>
+            <path d="M1256.66071,310.662194 C1038.55357,108.554065 929.5,7.5 929.5,7.5" id="Line-7" stroke="url(#linearGradient-1)"></path>
+            <path d="M930.088597,7.5684507 C399.029292,316.858077 133.49964,471.50289 133.49964,471.50289 C133.247124,472.048225 398.776776,317.403412 930.088597,7.5684507 Z" id="Line-8" stroke="url(#linearGradient-2)"></path>
+            <path d="M1256.5,224.5 L668.5,71.5" id="Line-9" stroke="#000000"></path>
+            <path d="M669.011597,71.3341738 C452.574029,338.16544 344.403408,471.55407 344.499736,471.500066 C344.499736,471.500066 452.670356,338.111435 669.011597,71.3341738 Z" id="Line-10" stroke="#000000"></path>
+        </g>
     </g>
 </svg>

@@ -5,6 +5,8 @@ const $$ = document.querySelectorAll.bind(document)
 
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|CriOS/i.test(navigator.userAgent)
 
+if (isMobile) document.documentElement.classList.add ('mobile')
+
 function rescale (x, from, to) {
 
   const t = (x - from[0]) / (from[1] - from[0]);
@@ -98,6 +100,8 @@ document.addEventListener ('DOMContentLoaded', () => {
 })
 
 
+// отключение "параллакс эффекта на мобильных"
+
 document.addEventListener ('DOMContentLoaded', () => {
 
     if (isMobile) {
@@ -119,22 +123,6 @@ document.addEventListener ('DOMContentLoaded', () => {
             }
         })
     }
-
-    if (isMobile) {
-
-        for(const h of $$('h2')){
-            h.style.animation = 'none'
-        }
-
-        for(const h of $$('h2.visible')){
-            h.style.animation = 'none'
-        }
-
-        // нужно отнести это ко всем вложенным path в #logo-text
-
-//         document.getElementById('logo-text').style.animation = 'none'
-    }
-
 })
 
 // анимации
