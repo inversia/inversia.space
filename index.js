@@ -129,6 +129,10 @@ document.addEventListener ('DOMContentLoaded', () => {
         for(const h of $$('h2.visible')){
             h.style.animation = 'none'
         }
+
+        // нужно отнести это ко всем вложенным path в #logo-text
+
+//         document.getElementById('logo-text').style.animation = 'none'
     }
 
 })
@@ -198,7 +202,14 @@ document.addEventListener ('DOMContentLoaded', () => {
 
 document.addEventListener ('DOMContentLoaded', () => {
 
-//     for (const parent of $$('.color-glitch')) {            ДУБЛИРУЕТСЯ КОД
+    if(isMobile){
+
+        for (const parent of $$('h2.visible')) {    // но мне нужны ВСЕ вложенные элементы указать, типа как ~ path
+            
+            parent.style.animation = "none"
+        }   
+
+    }
         
 //         const el = document.createElement ('DIV')
 //         parent.appendChild(el)
@@ -215,7 +226,7 @@ document.addEventListener ('DOMContentLoaded', () => {
 
 }) 
 
-// const headings = $$('h1')
+
 
 window.addEventListener ('scroll', () => {
 
@@ -223,7 +234,7 @@ window.addEventListener ('scroll', () => {
 
         const bottom = h.nextElementSibling.getBoundingClientRect().y
         const top    = bottom - h.offsetHeight
-        
+
         h.classList.toggle ('visible', (bottom > 0) && (top < window.innerHeight))
     }
 })
