@@ -17,12 +17,12 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     $('.play').onclick = function () {
 
-         if (isPlaying ()) {
-           audio.pause ()
+        if (isPlaying ()) {
+            audio.pause ()
 
-       } else {
-           audio.play ()
-       }   
+        } else {
+            audio.play ()
+        }
     }
 
     $('.forward').onclick = function () {
@@ -101,6 +101,7 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     audio.ontimeupdate = function () {
         $('.progress').style.width = rescale (audio.currentTime, [0, audio.duration], [0, 100]) + '%'
+        console.log('KAVABANGA')
     }
 
     const audioline = $('.audioline')
